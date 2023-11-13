@@ -15,5 +15,5 @@ while tentativas < limite:
         print("Senha correta, login efetivado!")
         break
 
-if tentativas == 3:
+if tentativas == limite:
     print("Você esgotou suas tentativas. Acesso negado.")
