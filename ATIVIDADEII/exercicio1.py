@@ -19,7 +19,23 @@ if tentativas == 3:
     
 
 
-#Aqui seria uma solução que eu adotaria, tomando liberdade de adicionar algumas funcionalidades
+"""
+Aqui seria uma solução que eu adotaria 
+Tomando liberdade de adicionar algumas funcionalidades, tais como:
+- criar uma variável de limite que auxiliaria em integrações futuras,
+mas neste código está ajudando apenas a calcular a quantidade tentativas;
+- ajustei o texto da senha incorreta para ficar mais coerente com o 
+contexto onde ele aparecerá;
+- inseri uma outra lógica condicional para printar a quantidade de tentativas restante.
+
+Outros pontos que poderia usar para deixar ainda mais interativo, mas evitei por não serem
+coerentes com a proposta do exercício:
+- criar funções para o processo, dividindo-as entre:
+    -- calcular tentativas e limite de tentativas;
+    -- verificar se a senha realmente bate utilizando hashlib;
+    -- possibilitar o reset da senha através de outra condição;
+
+"""
 senha = "123"
 tentativas = 0
 limite = 3
