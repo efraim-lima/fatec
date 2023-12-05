@@ -27,6 +27,8 @@ int main(){
         cout << "Parece que digitou uma consoante. \n Certifiue-se do que digitou anteriormente, por favor \n";
     }
 
+    cout << "\nDigite qualquer tecla para sair;" << endl;
+
     getch();
 
     return 0;
