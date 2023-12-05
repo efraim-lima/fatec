@@ -2,6 +2,7 @@
 #include <list>
 #include <conio.h>
 #include <algorithm>
+#include <string>
 
 using namespace std;
 
@@ -13,6 +14,8 @@ int main(){
     
     string caracter;
     cin >> caracter;
+
+    transform(caracter.begin(), caracter.end(),caracter.begin(), ::tolower);
 
     if (find(vogais.begin(), vogais.end(), caracter) != vogais.end()){
         cout << "O caractere digitado é uma vogal!" << endl;
