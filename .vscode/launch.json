@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/cyber/Documents/github/fatec/ATIVIDADEI",
-      "program": "c:/Users/cyber/Documents/github/fatec/ATIVIDADEI/build/Debug/outDebug",
+      "cwd": "c:/Users/cyber/Documents/github/fatec/ATIVIDADEII",
+      "program": "c:/Users/cyber/Documents/github/fatec/ATIVIDADEII/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
       "setupCommands": [
