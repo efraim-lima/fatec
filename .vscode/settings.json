@@ -62,5 +62,11 @@
   "files.associations": {
     "ostream": "cpp",
     "numeric": "cpp"
-  }
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after":  ["<Esc>"]
+    }
+  ],
 }
