@@ -10,22 +10,26 @@ _start:
     ; Lembrar que os números precisam ser na base hexadecimal:
     ; 0 1 2 3 4 5 6 7 8 9 A B C D E F
    
-    mov EAX, 0x4 ; Aqui estamos informando que vamos usar a função printString do kernel
-    mov EBX, 0x1 ; Aqui estamos informando o sistema que usaremos a saída padrão
-    mov ECX, tam ; Aqui estamos passando o elemento PAI (pai direto) para a função write
-    mov EDX, msg ; Aqui estamos passando o elemento FILHO (filho direto), ou seja, o comprimento da string
+    mov RAX, 0x4 ; Aqui estamos informando que vamos usar a função printString do kernel
+    mov RBX, 0x1 ; Aqui estamos informando o sistema que usaremos a saída padrão
+    mov RCX, msg ; Aqui estamos passando o elemento PAI (pai direto) para a função write
+    mov RDX, tam ; Aqui estamos passando o elemento FILHO (filho direto), ou seja, o comprimento da string
     int 0x80     ; Chamada a sistema para finalizar o processo
 
 
-    mov EAX, 0x1 ; Aqmsgestamos informando o SO que estamos terminando o programa
-    mov EBX, 0x0 ; Aqui estamos informando o SO que o retorno é 0, ou seja, concluiu sem erros
+    mov RAX, 0x1 ; Aqmsgestamos informando o SO que estamos terminando o programa
+    mov RBX, 0x0 ; Aqui estamos informando o SO que o retorno é 0, ou seja, concluiu sem erros
     int 0x80     ; Chamada a sistema para finalizar o processo
 
     ; Para transformar o programa em linguegem de máquina precisamos aplicar o comando abaixo no terminal:
-    ; nasm -f elf64 <nome_do_programa>.asm 
+    ; nasm -f elf64 <programa>.asm 
+    ; WINDOWS:
+    ; nasm -f win64 <programa>.asm -o <programa>.o
 
     ; Aqui estamos linqueditando o programa:
-    ; ld -s -o <nome_do_programa> <nome_do_programa>.o
+    ; ld -s -o <programa> <programa>.o
+    ; WINDOWS:
+    ; ld <programa>.o -o <programa>.exe 
     
     ; Para rodar o programa no diretório  atual basta digitar:
     ; ./<nome_do_programa>
