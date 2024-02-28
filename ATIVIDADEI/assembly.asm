@@ -1,10 +1,9 @@
 section .data
-    msg db "Hello World"
-    tam equ $-msg ; $- é uma forma de ler o tamanho automaticamente
+    msg: db "Hello World", 0xA   ; aqui estamos criando uma constante e 0xA (valor 10) é o caractere de nova linha.
+    tam: equ $- msg              ; $- é uma forma de ler o tamanho automaticamente
 
 section .text
-
-global _start
+    global _start
 
 _start:
     ; Lembrar da sintaxe: destino, origem
@@ -13,12 +12,12 @@ _start:
    
     mov EAX, 0x4 ; Aqui estamos informando que vamos usar a função printString do kernel
     mov EBX, 0x1 ; Aqui estamos informando o sistema que usaremos a saída padrão
-    mov ECX, msg ; Aqui estamos passando o elemento PAI (pai direto) para a função write
-    mov EDX, tam ; Aqui estamos passando o elemento FILHO (filho direto), ou seja, o comprimento da string
+    mov ECX, tam ; Aqui estamos passando o elemento PAI (pai direto) para a função write
+    mov EDX, msg ; Aqui estamos passando o elemento FILHO (filho direto), ou seja, o comprimento da string
     int 0x80     ; Chamada a sistema para finalizar o processo
 
 
-    mov EAX, 0x1 ; Aqui estamos informando o SO que estamos terminando o programa
+    mov EAX, 0x1 ; Aqmsgestamos informando o SO que estamos terminando o programa
     mov EBX, 0x0 ; Aqui estamos informando o SO que o retorno é 0, ou seja, concluiu sem erros
     int 0x80     ; Chamada a sistema para finalizar o processo
 
