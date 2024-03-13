@@ -19,9 +19,9 @@ Manutenção Preventiva (ocorre antes do problema)
 hmm -> horario de menor movimento
 
 Manutenção Preditiva (ocorre antes do problema)
-* toda e qualquer ação feita de forma contínua, monitorando os sinais e procurando evitar possíveis paradas antes que elas ocorram Microsuite que acionada, tamped proof (pesquisar sobre)
+* de todas é a mais eficienete e apresenta mair produtividade pois evita paradas e só para quando necessário, é composta por toda e qualquer ação feita de forma contínua, monitorando os sinais e procurando evitar possíveis paradas antes que elas ocorram Microsuite que acionada, tamped proof (pesquisar sobre)
 --> Palavras Chave: pro ativa, continua, monitorada, sensores
 --> Pontos Fortes: paradas estritamente necessárias (apenas quando a ggrandeza sai fora do limite de controle, caso não saia nao colocamos a mao no equipamento), intervenção controlada (na maioria das vezes), maior produtividade (pois só pararemos de forma controlada e qundo é necessáio)
---> Pontos Fracos: custos*, efeito probe (falha no sensor que monitora), não evita 100% a corretiva
+--> Pontos Fracos: custos*, efeito probe (falha no sensor que monitora, no sistema de monitoramento que monitoram: temperatura, espaço de dissco, alimentação, velocidade de cooler, utilização de CPU, trafego na rede, sensor de intrusão de gabinete, INTI), não evita 100% a corretiva
 * custos não entram 100% como pontos fracos por cconta das métricas SMART
---> Quando Usar: quando uma eventual parada do sistema tem um alto impacto no negócio (custa muito dinheiro), alta produtividade
+--> Quando Usar: quando uma eventual parada do sistema tem um alto impacto no negócio (custa muito dinheiro), alta produtividade:

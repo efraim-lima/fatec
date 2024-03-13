@@ -1,0 +1,40 @@
+Sinais vitais que devemos prestar atenção na maquina:
+-temperatura
+-espaço e disco
+-alimentação
+-velocidade de cooler
+-utilização cpu
+-trafego na rede
+-INTI
+
+Podemos fazer o acompanhamento destes sinais em uma ferramenta chamada NAGIOS
+
+propor um roteiro com 5 intens de uma manutenção fisica preventiva:
+-limpeza de pó, apertar parafusos, troca de pasta termica, alteração de pata para sata
+
+propor um roteiro com 5 intens de uma manutenção lógica preventiva:
+-ponto de restauração, desinstalar aplicativos não utilizados, varredura de malwares, defragmentação, limpeza de cookies;
+
+KPIs
+
+trabalharemos com indices específicos para que possamos compreender o que ocorre e em quanto tempo ocorrem os processos
+
+I) MTBF - Medium Time Between Failure
+--> quando o ráfico está em cima significa que o equipamento está funcionando naquele timestamp do gráfico, o que avaliamos é a quantidade média em que a linha do gráfico esteve na posição superior do gráfico. Para medir este comportamento plea média de períodos ativo por periodos ativos, ou seja, a somatória de períodos ativos dividia pela quantidade de períodos ativos.
+--> aumenta a quantidade de manutenções preventivas e diminui a quantidade de manutenções corretivas;
+--> o processo de manutenção é procurar de 2 a 3 desvios padrões (4 ou 6 sigma) da média de tempo ativo para trás para acertar no  ponto mais proximo da facilidade de manutenção.
+
+Existem equipamentos que possuem uma característica de perder totalmente sua capacidade de uso, para tal determinamos o tempo em que este equipamento como lifetime.
+
+bbath curve -> a curva da banheira determina que os defeitos em função do tempo ocorrem mais nos seus primeiros momentos (morte infantil ou prematura)  ou ocorrer depois de muito tempo de uso (desgaste ou obsolescencia).
+
+bath curve serve tanto para harwares quanto para softwares, pois podem ocorrer erros nos primeiros instantes ou depois de muito uso, ambas as duas tecnologias possuem a mesma curva.
+
+QUESTÃO DE PROVA:
+Se uma rede possui uma MTBF de 97% significa que possui uma relação ruim de qualidade, a AWS garante 99.999% e para adicionar mais um 9 a este numero seriam gastos milhões de dolares.
+
+II) MTTR - Main Time to Repair
+
+Consideramos o tempo medio de reparo e conserto o tempo em que paramos de produzir informação e o tempo em que falaremos para o usuário em que nosso serviço ficará indisponível.
+
+Calculamos MTTR a partir da média de tempo de reparos pela quantidade de reparos ocorridos, ou seja, a somatória dos tempos de reparos dividida pela quantidade de reparos que ocorreram no passado.
