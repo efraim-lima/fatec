@@ -38,3 +38,28 @@ II) MTTR - Main Time to Repair
 Consideramos o tempo medio de reparo e conserto o tempo em que paramos de produzir informação e o tempo em que falaremos para o usuário em que nosso serviço ficará indisponível.
 
 Calculamos MTTR a partir da média de tempo de reparos pela quantidade de reparos ocorridos, ou seja, a somatória dos tempos de reparos dividida pela quantidade de reparos que ocorreram no passado.
+
+No gráfico de funcional x tempo enquanto a linha está em cima consideramos MTBF e quando está embaixo consideramos MTTR; outro ponto é que podemos trabalhar com PWM, assim como no arduino, controlando a saida digital, ou seja, mantemos algum equipamento standby para inserir 
+
+III) Disponibilidade
+--> é a porcentagem do tempo que o equipamento ou sistem fica disponivel
+
+Podemos calcular a disponibilidade através da relação entre MTBF e MTTR, ou seja, dividindo MTBF por MTTR. A saída desta conta estará em porcentagem.
+
+relação: 0 <= Disponibilidade <= 1
+
+IV) Indisponibilidade
+
+a indisponibilidade pode ser medida pela imagem da disponibilidade, ou seja, 1 -Disponibilidade
+
+QUESTÃO DE PROVA
+Analisando a formaula da disponibilidade, proponha 3 ações efetivas para melhorar este índice:
+R: para melhorar este indice é preciso aumentar a disponibilidade, e para isso é necessário aumentar MTBF e/ou diminuir MTTR. Para aumentar MTBF podemos implementar ou aumentar manutenção preventiva/preditiva; treinar usuários, para diminuir MTTR podemos implementar treinamento técnico, spare parts (peçaas sobressalentes), disco padrão (clone de disco, cópia do Sistema Operacional com o objetivo aumentar a velocidade de recuperação do dispositivo).
+
+Caso a pergunta seja de analisar a INDISPONIBILIDADE invertem-se os vetores de MTTR e MTBF na equação, ou seja, MTTR precisa diminuir e MTBF precisa aumentar na equação, mas as ações para isso são as mesmas que no caso anterior.
+
+QUESTÃO DE PROVA
+Rede tem ua projeção de fincionamento de 4000hs. A disponibilidade é de 98%. Isso é bom ou é ruim? Justifique.
+R: Disponibilidade é tratado como SLRA. O calculo a ser feito é de: quantidade de horas (4000) divididas pelo MTTR ()
+
+Fazer uma folha de caderno a resposta de algumas perguntas como: o que é downtime, quais as caracteristicas devem ser levadas em conta para se calcular o downtime e como calcular 
