@@ -1,0 +1,62 @@
+MAC ADDRESS (endereço físico)
+
+Todo mac address tem um SSID que é o noma de arede e um BSSID que é o Mac Address
+
+SSID => nme da rede
+BSSID => endereço MAC (localiza a placa de rede)
+--> no momento da aula o MAC foi um hexa com base 16 no padrão Unix, ou seja, FF:FF:FF:FF:FF:FF (usando separadores ":"), em máquinas Windows usa-se o padrão FF-FF-FF-FF-FF-FF, em máquinas IOS ou Cisco usa-se o padrão FFFF.FFFF.FFFF.
+
+MAC = endereço físico (placa de rede)
+IP = endereço lógico (protocolo de endereçamento)
+-> ambos se correlacionam
+
+Os primeiros 6 dígitos identificam o fabricante e o numero de série (ou seja, os primeiros 64 bytes)
+
+--> na prova precisamos prestar atenção ao modelo pedido pelo professor no enunciado para inputar o modelo correto. Também precisamos detectar se a máquina interpreta ou não case sensitive.
+
+Endereços wireless possuem um padrão do fabricante IEEE ("ai triple i" em portuingles)
+
+
+WPA3 com AES-CCMP é a forma de criptogragia mais avançada atualmente
+
+Vamos atacar uma criptogragia WPA2-Personal que é uma tecnologia usada em locais SOHO (Small Office Home Office) de nome "cabrini"
+
+
+Flags: CAFE:36AB:479X => está no padrão Cisco IOS, mas com ":", que seria do padrão UNIX e possui um X no final, isso está errado.
+
+Os 6 primeiros bytes identificam para onde o pacote está indo e os 6 demais de onde está vindo
+
+A camada data link é dividida em 2 partes: LLC (Lgical Link Control) e MAC 
+O LLC permite o intercêmbio de informação entre IPv4 e IPv6, para casos onde um protocolo precisa se comunicar com o outro
+
+Na camada física tratamos e frequencia, alcance, tipo de conector, cabos, antenas, potencia, NIC
+
+FRAME
+ethernet e wireless precisam obrigatoriamente saber o que tem dentro dos frames (quadro)
+--> a camada LLC traz um código hexadecimal sendo que o 0x0800 corresponde ao IPv4, 0x0806 é o ARP, 0x86DD seria o do IPv6, pesquisar sobre code type do frame ethernet.
+
+-> FRAME ETHERNET - MTU 1500 (Maximum Transmission Unit)
+----> possui quantidade maxima de transporte de 1518, caso precise levar menos do que o permitido de dados 1500 (bytes), ele usa o padding para preencher
+----> para transportar um único pacote IP precisa-se fragmentá-lo em 44 frames, pois cada pacote IP possui 65000 bits e o frame suporta ~1500 bits
+
+
+Header da camada física 
+	=> Preambolo: 56 bits delimitando o tempo
+	=> SFD: Start frame delimiter (10101011) informa o momento onde será enviado o endereço de destino e origem
+Destino
+Origem
+Tam/Type
+Data
+Padding => verifica erros
+CRC (Checagem Redundancia Ciclica)  => não é mais usado hoje em dia, antes os bits poderiam ser invertidos ma comunicação, o algorítmo é o CRC-32
+
+hash =>  uma função que sintetiza irreversívelmente o conteúdo analisado
+------> para aplicar hashing no linux: md5sum <aquivo>, sha256sum <arquivo>, sha564sum <arquivo>
+
+Bits divididos entre rampa de subida (bit 1), rampa de descida (bit 0), a rampa é a frequência de cadenciamento de sincronização
+
+
+
+
+
+-------> transferir tabela ASCII excell para este diretório

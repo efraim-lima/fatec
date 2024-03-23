@@ -16,3 +16,8 @@ sudo airodump-ng <interface>            #aqui ele detecta as redes, traz detalhe
 tcpdump -i <interface>                  #para começar a ler o trafego das redes vizinhas
 tcpdump -vv -nn -i <interface>          #para começar a ler o trafego das redes vizinhas com informaçoes mais precisas
 
+curl <website> | sed 's/[^a-zA-Z]/ /g' | tr 'A-Z' 'a-z\n' | grep '[a-z]' | sort -u > /tmp/wordlist.txt
+					#comando para acessar uma webpage, selecionar conteúdo em texto presente na página, formatar em forma de texto pulando sempre uma linha após o texto, organizar alfabeticamente e salvar em um arquivo temporário de nome wordlist.txt
+
+hydra -l <usuario> -P /tmp/wordlist.txt -V -f 4 <ip_alvo> ssh
+					#comando para tentar bruteforce com nome de usuário dado, usando uma wordlist específica em um ipv4 dado usando protocolo ssh (teoricamente porta 22, mas pode ter sido alterada)

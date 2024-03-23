@@ -1,0 +1,25 @@
+Bootstrap
+
+--> 
+
+
+
+avaliação N1 => 05/04/2024
+
+início às 20h30 -> prova em dupla e com consulta
+
+
+Conteúdo da Prova:
+
+-> Arquitetura e Organização de Computadores
+-> Sistema Operacional => definições e tipos
+-> Interface homem-maquina
+-> Interpretadores (texto e gráfico), (shell)
+-> Processos
+	--> o que é PCB (?)
+	--> Processos preemptivos e não preemptivos
+-> Bootstrap
+-> Bios
+	--> o que é
+	--> como funciona
+-> Kernel
