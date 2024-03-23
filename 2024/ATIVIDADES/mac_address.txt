@@ -96,7 +96,11 @@ hash =>  uma função que sintetiza irreversívelmente o conteúdo analisado
 
 Bits divididos entre rampa de subida (bit 1), rampa de descida (bit 0), a rampa é a frequência de cadenciamento de sincronização
 
+LIÇÃO DE CASA:
+Ir ao site IPv6.br -> site do comite gestor de internet para popularizar o IPv6, algo que é deficitário em nosso curso;
+baixar o livro Lab de IPv6, ele vem com uma maquina virtual do Core, da Boeng
 
+Ele ensina sobre como funciona o protocolo em detalhes.
 
 
 
