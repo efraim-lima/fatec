@@ -1,15 +1,16 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
+from Configuration import config
+
 
 def fetch_page(url):
     options = Options()
-    options.add_argument("--headless",
-            "--disable-dev-shm-usage",
-            "--no-sandbox",
-            "--disable-gpu"
-            )
-    driver = webdriver.Chrome(options=options)
+    options.add_argument("--headless")  # Run Chrome in headless mode
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-gpu")
+    driver = config.webDriver()
     driver.get(url)
     html_content = driver.page_source
     driver.quit()

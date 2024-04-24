@@ -1,0 +1,3 @@
+Acessar o documeto RFC 2460 -> https://www.rfc-editor.org/rfc/rfc2460
+
+Next Header e Protocol identificam o que tem dentro do pacote, é uma inspeção do que o mesmo está carregando.
