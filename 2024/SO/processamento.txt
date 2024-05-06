@@ -1,0 +1,1 @@
+padrão de tamanho do sistema NTFS é de 1kb
