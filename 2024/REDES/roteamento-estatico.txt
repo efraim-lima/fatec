@@ -1,0 +1,140 @@
+Protocolos de rede de borda:
+
+IGP => Interior Gateway Protocol
+- usada no internor de nossa rede para descobrir novos routers na rede interna.
+
+EGP => Exterior Gateway Protocol
+- usada para detectar routers na rede externa à nossa, como do provedor da nossa cidade.
+
+BGP => Border Gateway Protocol
+- usada para interligar redes a níveis maiores, como entre estados.
+
+Comunicação serial para ambiente corporativo
+Para linkar 2 routers precisamos usar o cabo DCE-DTE => Data Communication Equipament / Data Terminal Equipment | isso junto ao WIC-1T (essencial para conectar o modem DTE DCE ao router através do cabo DTE)
+-> O cabo DCE é o femea, e o cao DTE é o macho, esses cabos são feitos para que possamos conectar modems diretamente ao provedor que ofertem maior volume de dedaos.
+
+O protocolo RIP1, RIP2 e RIPng são protocolos de descoberta de nós de routers de caminho mais rapido entre hops.
+
+Fazer o exercício do VLSM - rip IPv4 e IPv6
+Estudar o RFC 1918
+
+Comandos usados:
+
+show ip routes -> para mostrar os ips configurados naquela máquina
+enable
+configure terminal
+	interface Serial 0/0/0
+		ip address <ip para esta interface> <mascara de rede do ip>
+		no shutdown
+		exit
+	interface FastEthernet 0/0
+		ip address <ip para a interface> <mascara de rede do ip>
+		no shutdown
+		exit
+	route rip
+		network <endereço de redes vizinhas (rodar para cada rede)>
+		exit
+
+	exit
+exit
+ 
+
+
+Abaixo segue o show running-config para futuras configurações::
+
+"""
+
+
+show running-config
+
+
+
+Building configuration...
+
+Current configuration : 766 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2811/K9 sn FTX10170O1O-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 10.0.0.1 255.0.0.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/0/0
+ ip address 172.16.0.2 255.255.0.0
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router rip
+ network 10.0.0.0
+ network 172.16.0.0
+!
+ip classless
+ip route 172.16.0.0 255.255.0.0 192.168.0.1 
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
+
+"""
