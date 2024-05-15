@@ -1,0 +1,33 @@
+Aqui vamos configurar um switch que precisa se conectar a um router e um host na outra ponta do router, para isso precisamos seguir os seguintes passos::
+
+1. Conecte-se ao switch com o o laptop e o cabo console.
+
+2. Configure o switch com o nome de: LOCAL-SWITCH.
+
+3. Configure a mensagem do banner como: "Unauthorized access is forbidden".
+
+4. Configure a senha para acesso privilegiado de forma encriptada usando md5 hash com a senha "cisco".
+
+5. Configure criptografia de senha no switch usando a linha de configuração global.
+
+6. Configurar o acesso ao console com os seguintes parametros :
+   - Login enabled
+   - Password : ciscoconsole
+   - History size : 15 commands
+   - Timeout : 6'45''
+   - Synchronous logging 
+
+6. Configurar o acesso via telnet com os seguintes parametros :
+   - Login enabled
+   - Password : ciscotelnet
+   - History size : 15 commands
+   - Timeout : 8'20''
+   - Synchronous logging 
+
+7. Configurar o endereço de IP do switch para 192.168.1.2/24 e o default gateway para 192.168.1.1.
+
+8. Testar a conexão telnet.
+
+
+Todos os direitos : http://www.packettracernetwork.com
+Traução: Efraim Lima, o CyberEtico
