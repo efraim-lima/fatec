@@ -1,0 +1,24 @@
+Socket: Ip e Porta de origem x Ip e Porta de destino
+
+Seed: a conexão fixada entre IP de destino e IP de origem
+
+UDP connectionless => não orientado à conexão
+---> server para DNS services, 
+
+TCP connectione => orientado à conexão
+
+O processo de conexão TCP (handshake):
+SYN
+SYN,ACK
+ACK
+PSH, ACK
+ACK
+FIN, ACK
+FIN, ACK
+ACK
+
+No wireshark o hacker analisa as mensagens com a flag PSH (ou push)
+
+Estudar gerenciamento de serviços
+
+checar os rfcs do tcp e do udpm no site da ietf.org.
