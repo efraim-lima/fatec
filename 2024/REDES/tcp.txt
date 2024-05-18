@@ -3,7 +3,7 @@ Socket: Ip e Porta de origem x Ip e Porta de destino
 Seed: a conexão fixada entre IP de destino e IP de origem
 
 UDP connectionless => não orientado à conexão
----> server para DNS services, 
+---> server para DNS services, NTPs services para sincronizar horarios
 
 TCP connectione => orientado à conexão
 
