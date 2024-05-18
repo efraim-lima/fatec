@@ -12,5 +12,8 @@ Desligar o verificar o ufw: sudo ufw disable / status
 Para saber se uma porta está livre ou não, no linux:
 
 cat /etc/services
+sudo tail -f /etc/log/auth.log
 
 etc -> arquivos de configuração do linux
+
+
