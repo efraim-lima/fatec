@@ -1,0 +1,289 @@
+2024-05-22 16:01:10,559 - logs.logs - database conn activated at 2024-05-22 16:01:09
+2024-05-22 16:01:10,562 - logs.logs - return of conn at 2024-05-22 16:01:09
+2024-05-22 16:01:11,634 - logs.logs - database conn activated at 2024-05-22 16:01:09
+2024-05-22 16:01:11,636 - logs.logs - table history created at 2024-05-22 16:01:09
+2024-05-22 16:01:11,637 - logs.logs - table total created at 2024-05-22 16:01:09
+2024-05-22 16:01:11,637 - logs.logs - conn yeld at 2024-05-22 16:01:09
+2024-05-22 16:01:11,638 - logs.logs - return of conn at 2024-05-22 16:01:09
+2024-05-22 16:01:19,066 - logs.logs - database conn activated at 2024-05-22 16:01:09
+2024-05-22 16:01:19,164 - logs.logs - data sanitized: ticker=AAPL, amount=2 and date=2024-05-22 16:01:09 at 2024-05-22 16:01:09
+2024-05-22 16:01:19,191 - logs.logs - database conn activated at 2024-05-22 16:01:09
+2024-05-22 16:01:19,192 - logs.logs - ticker=AAPL, amount=2 | 2024-05-22 16:01:09 | SANITIZED
+2024-05-22 16:01:19,193 - logs.logs - return of conn at 2024-05-22 16:01:09
+2024-05-22 16:01:19,193 - logs.logs - id=14C9FF36B3, ticker=AAPL, amount=2 | 2024-05-22 16:01:09 | ADDED
+2024-05-22 16:01:19,194 - logs.logs - conn yeld at 2024-05-22 16:01:09
+2024-05-22 16:01:19,194 - logs.logs - return of conn at 2024-05-22 16:01:09
+2024-05-22 16:07:07,067 - logs.logs - database conn activated at 2024-05-22 16:07:05
+2024-05-22 16:07:07,070 - logs.logs - return of conn at 2024-05-22 16:07:05
+2024-05-22 16:07:07,397 - logs.logs - database conn activated at 2024-05-22 16:07:05
+2024-05-22 16:07:07,398 - logs.logs - table history created at 2024-05-22 16:07:05
+2024-05-22 16:07:07,399 - logs.logs - table total created at 2024-05-22 16:07:05
+2024-05-22 16:07:07,400 - logs.logs - conn yeld at 2024-05-22 16:07:05
+2024-05-22 16:07:07,400 - logs.logs - return of conn at 2024-05-22 16:07:05
+2024-05-22 16:07:11,346 - logs.logs - database conn activated at 2024-05-22 16:07:05
+2024-05-22 16:07:11,467 - logs.logs - data sanitized: ticker=AAPL, amount=20 and date=2024-05-22 16:07:05 at 2024-05-22 16:07:05
+2024-05-22 16:07:11,480 - logs.logs - database conn activated at 2024-05-22 16:07:05
+2024-05-22 16:07:11,485 - logs.logs - ticker=AAPL, amount=20 | 2024-05-22 16:07:05 | SANITIZED
+2024-05-22 16:07:11,489 - logs.logs - return of conn at 2024-05-22 16:07:05
+2024-05-22 16:07:11,490 - logs.logs - id=F2CA17F3DA, ticker=AAPL, amount=20 | 2024-05-22 16:07:05 | ADDED
+2024-05-22 16:07:11,490 - logs.logs - conn yeld at 2024-05-22 16:07:05
+2024-05-22 16:07:11,491 - logs.logs - return of conn at 2024-05-22 16:07:05
+2024-05-22 16:11:38,042 - logs.logs - database conn activated at 2024-05-22 16:11:36
+2024-05-22 16:11:38,045 - logs.logs - return of conn at 2024-05-22 16:11:36
+2024-05-22 16:11:39,604 - logs.logs - database conn activated at 2024-05-22 16:11:36
+2024-05-22 16:11:39,605 - logs.logs - table history created at 2024-05-22 16:11:36
+2024-05-22 16:11:39,608 - logs.logs - table total created at 2024-05-22 16:11:36
+2024-05-22 16:11:39,609 - logs.logs - conn yeld at 2024-05-22 16:11:36
+2024-05-22 16:11:39,616 - logs.logs - return of conn at 2024-05-22 16:11:36
+2024-05-22 16:11:50,643 - logs.logs - database conn activated at 2024-05-22 16:11:36
+2024-05-22 16:11:50,764 - logs.logs - data sanitized: ticker=AAPL, amount=9 and date=2024-05-22 16:11:36 at 2024-05-22 16:11:36
+2024-05-22 16:11:50,778 - logs.logs - database conn activated at 2024-05-22 16:11:36
+2024-05-22 16:11:50,789 - logs.logs - ticker=AAPL, amount=9 | 2024-05-22 16:11:36 | SANITIZED
+2024-05-22 16:11:50,792 - logs.logs - return of conn at 2024-05-22 16:11:36
+2024-05-22 16:11:50,793 - logs.logs - id=4B016215E8, ticker=AAPL, amount=9 | 2024-05-22 16:11:36 | ADDED
+2024-05-22 16:11:50,793 - logs.logs - conn yeld at 2024-05-22 16:11:36
+2024-05-22 16:11:50,794 - logs.logs - return of conn at 2024-05-22 16:11:36
+2024-05-22 16:25:24,067 - logs.logs - database conn activated at 2024-05-22 16:25:23
+2024-05-22 16:25:24,070 - logs.logs - return of conn at 2024-05-22 16:25:23
+2024-05-22 16:25:25,106 - logs.logs - database conn activated at 2024-05-22 16:25:23
+2024-05-22 16:25:25,108 - logs.logs - table history created at 2024-05-22 16:25:23
+2024-05-22 16:25:25,112 - logs.logs - table total created at 2024-05-22 16:25:23
+2024-05-22 16:25:25,113 - logs.logs - conn yeld at 2024-05-22 16:25:23
+2024-05-22 16:25:25,114 - logs.logs - return of conn at 2024-05-22 16:25:23
+2024-05-22 16:25:31,756 - logs.logs - database conn activated at 2024-05-22 16:25:23
+2024-05-22 16:25:31,902 - logs.logs - data sanitized: ticker=AAPL, amount=10 and date=2024-05-22 16:25:23 at 2024-05-22 16:25:23
+2024-05-22 16:25:31,924 - logs.logs - database conn activated at 2024-05-22 16:25:23
+2024-05-22 16:25:31,933 - logs.logs - ticker=AAPL, amount=10 | 2024-05-22 16:25:23 | SANITIZED
+2024-05-22 16:25:31,943 - logs.logs - ticker=AAPL, new_amount=10, total_amount= (updated) | 2024-05-22 16:25:23 | UPDATED
+2024-05-22 16:25:31,943 - logs.logs - conn yeld at 2024-05-22 16:25:23
+2024-05-22 16:25:31,943 - logs.logs - return of conn at 2024-05-22 16:25:23
+2024-05-22 16:25:31,944 - logs.logs - id=8133B30055, ticker=AAPL, amount=10 | 2024-05-22 16:25:23 | ADDED
+2024-05-22 16:25:31,947 - logs.logs - conn yeld at 2024-05-22 16:25:23
+2024-05-22 16:25:31,947 - logs.logs - return of conn at 2024-05-22 16:25:23
+2024-05-22 16:26:17,436 - logs.logs - database conn activated at 2024-05-22 16:26:15
+2024-05-22 16:26:17,439 - logs.logs - return of conn at 2024-05-22 16:26:15
+2024-05-22 16:26:17,943 - logs.logs - database conn activated at 2024-05-22 16:26:15
+2024-05-22 16:26:17,945 - logs.logs - table history created at 2024-05-22 16:26:15
+2024-05-22 16:26:17,946 - logs.logs - table total created at 2024-05-22 16:26:15
+2024-05-22 16:26:17,946 - logs.logs - conn yeld at 2024-05-22 16:26:15
+2024-05-22 16:26:17,947 - logs.logs - return of conn at 2024-05-22 16:26:15
+2024-05-22 16:26:24,753 - logs.logs - database conn activated at 2024-05-22 16:26:15
+2024-05-22 16:26:24,891 - logs.logs - data sanitized: ticker=AAPL, amount=10 and date=2024-05-22 16:26:15 at 2024-05-22 16:26:15
+2024-05-22 16:26:24,902 - logs.logs - database conn activated at 2024-05-22 16:26:15
+2024-05-22 16:26:24,907 - logs.logs - ticker=AAPL, amount=10 | 2024-05-22 16:26:15 | SANITIZED
+2024-05-22 16:26:24,910 - logs.logs - ticker=AAPL, new_amount=10, total_amount= (updated) | 2024-05-22 16:26:15 | UPDATED
+2024-05-22 16:26:24,911 - logs.logs - conn yeld at 2024-05-22 16:26:15
+2024-05-22 16:26:24,911 - logs.logs - return of conn at 2024-05-22 16:26:15
+2024-05-22 16:26:24,912 - logs.logs - id=1512DEE97B, ticker=AAPL, amount=10 | 2024-05-22 16:26:15 | ADDED
+2024-05-22 16:26:24,915 - logs.logs - conn yeld at 2024-05-22 16:26:15
+2024-05-22 16:26:24,916 - logs.logs - return of conn at 2024-05-22 16:26:15
+2024-05-22 16:26:48,508 - logs.logs - database conn activated at 2024-05-22 16:26:47
+2024-05-22 16:26:48,511 - logs.logs - return of conn at 2024-05-22 16:26:47
+2024-05-22 16:26:48,999 - logs.logs - database conn activated at 2024-05-22 16:26:47
+2024-05-22 16:26:49,001 - logs.logs - table history created at 2024-05-22 16:26:47
+2024-05-22 16:26:49,002 - logs.logs - table total created at 2024-05-22 16:26:47
+2024-05-22 16:26:49,008 - logs.logs - conn yeld at 2024-05-22 16:26:47
+2024-05-22 16:26:49,008 - logs.logs - return of conn at 2024-05-22 16:26:47
+2024-05-22 16:26:51,771 - logs.logs - database conn activated at 2024-05-22 16:26:47
+2024-05-22 16:26:51,869 - logs.logs - data sanitized: ticker=AAPL, amount=90 and date=2024-05-22 16:26:47 at 2024-05-22 16:26:47
+2024-05-22 16:26:51,893 - logs.logs - database conn activated at 2024-05-22 16:26:47
+2024-05-22 16:26:51,897 - logs.logs - ticker=AAPL, amount=90 | 2024-05-22 16:26:47 | SANITIZED
+2024-05-22 16:26:51,900 - logs.logs - ticker=AAPL, new_amount=90, total_amount= (updated) | 2024-05-22 16:26:47 | UPDATED
+2024-05-22 16:26:51,901 - logs.logs - conn yeld at 2024-05-22 16:26:47
+2024-05-22 16:26:51,902 - logs.logs - return of conn at 2024-05-22 16:26:47
+2024-05-22 16:26:51,903 - logs.logs - id=0C7BC8322D, ticker=AAPL, amount=90 | 2024-05-22 16:26:47 | ADDED
+2024-05-22 16:26:51,903 - logs.logs - conn yeld at 2024-05-22 16:26:47
+2024-05-22 16:26:51,904 - logs.logs - return of conn at 2024-05-22 16:26:47
+2024-05-22 16:27:22,358 - logs.logs - database conn activated at 2024-05-22 16:27:21
+2024-05-22 16:27:22,359 - logs.logs - return of conn at 2024-05-22 16:27:21
+2024-05-22 16:27:22,738 - logs.logs - database conn activated at 2024-05-22 16:27:21
+2024-05-22 16:27:22,740 - logs.logs - table history created at 2024-05-22 16:27:21
+2024-05-22 16:27:22,742 - logs.logs - table total created at 2024-05-22 16:27:21
+2024-05-22 16:27:22,743 - logs.logs - conn yeld at 2024-05-22 16:27:21
+2024-05-22 16:27:22,743 - logs.logs - return of conn at 2024-05-22 16:27:21
+2024-05-22 16:27:25,798 - logs.logs - database conn activated at 2024-05-22 16:27:21
+2024-05-22 16:27:25,831 - logs.logs - data sanitized: ticker=AAPL, amount=90 and date=2024-05-22 16:27:21 at 2024-05-22 16:27:21
+2024-05-22 16:27:25,839 - logs.logs - database conn activated at 2024-05-22 16:27:21
+2024-05-22 16:27:25,840 - logs.logs - ticker=AAPL, amount=90 | 2024-05-22 16:27:21 | SANITIZED
+2024-05-22 16:27:25,841 - logs.logs - ticker=AAPL, new_amount=90, total_amount= (updated) | 2024-05-22 16:27:21 | UPDATED
+2024-05-22 16:27:25,841 - logs.logs - conn yeld at 2024-05-22 16:27:21
+2024-05-22 16:27:25,841 - logs.logs - return of conn at 2024-05-22 16:27:21
+2024-05-22 16:27:25,841 - logs.logs - id=0ED39FF096, ticker=AAPL, amount=90 | 2024-05-22 16:27:21 | ADDED
+2024-05-22 16:27:25,841 - logs.logs - conn yeld at 2024-05-22 16:27:21
+2024-05-22 16:27:25,841 - logs.logs - return of conn at 2024-05-22 16:27:21
+2024-05-22 16:29:28,309 - logs.logs - database conn activated at 2024-05-22 16:29:27
+2024-05-22 16:29:28,312 - logs.logs - return of conn at 2024-05-22 16:29:27
+2024-05-22 16:29:28,798 - logs.logs - database conn activated at 2024-05-22 16:29:27
+2024-05-22 16:29:28,799 - logs.logs - table history created at 2024-05-22 16:29:27
+2024-05-22 16:29:28,801 - logs.logs - table total created at 2024-05-22 16:29:27
+2024-05-22 16:29:28,801 - logs.logs - conn yeld at 2024-05-22 16:29:27
+2024-05-22 16:29:28,802 - logs.logs - return of conn at 2024-05-22 16:29:27
+2024-05-22 16:29:33,052 - logs.logs - database conn activated at 2024-05-22 16:29:27
+2024-05-22 16:29:33,178 - logs.logs - data sanitized: ticker=AAPL, amount=10 and date=2024-05-22 16:29:27 at 2024-05-22 16:29:27
+2024-05-22 16:29:33,209 - logs.logs - database conn activated at 2024-05-22 16:29:27
+2024-05-22 16:29:33,216 - logs.logs - ticker=AAPL, amount=10 | 2024-05-22 16:29:27 | SANITIZED
+2024-05-22 16:29:33,220 - logs.logs - return of conn at 2024-05-22 16:29:27
+2024-05-22 16:29:33,221 - logs.logs - id=6858E70872, ticker=AAPL, amount=10 | 2024-05-22 16:29:27 | ADDED
+2024-05-22 16:29:33,221 - logs.logs - conn yeld at 2024-05-22 16:29:27
+2024-05-22 16:29:33,222 - logs.logs - return of conn at 2024-05-22 16:29:27
+2024-05-22 16:30:11,537 - logs.logs - database conn activated at 2024-05-22 16:30:09
+2024-05-22 16:30:11,542 - logs.logs - return of conn at 2024-05-22 16:30:09
+2024-05-22 16:30:12,494 - logs.logs - database conn activated at 2024-05-22 16:30:09
+2024-05-22 16:30:12,496 - logs.logs - table history created at 2024-05-22 16:30:09
+2024-05-22 16:30:12,497 - logs.logs - table total created at 2024-05-22 16:30:09
+2024-05-22 16:30:12,498 - logs.logs - conn yeld at 2024-05-22 16:30:09
+2024-05-22 16:30:12,498 - logs.logs - return of conn at 2024-05-22 16:30:09
+2024-05-22 16:30:17,422 - logs.logs - database conn activated at 2024-05-22 16:30:09
+2024-05-22 16:30:17,546 - logs.logs - data sanitized: ticker=AAPL, amount=10 and date=2024-05-22 16:30:09 at 2024-05-22 16:30:09
+2024-05-22 16:30:17,574 - logs.logs - database conn activated at 2024-05-22 16:30:09
+2024-05-22 16:30:17,580 - logs.logs - ticker=AAPL, amount=10 | 2024-05-22 16:30:09 | SANITIZED
+2024-05-22 16:30:17,583 - logs.logs - return of conn at 2024-05-22 16:30:09
+2024-05-22 16:30:17,584 - logs.logs - id=BC84AFFB31, ticker=AAPL, amount=10 | 2024-05-22 16:30:09 | ADDED
+2024-05-22 16:30:17,586 - logs.logs - conn yeld at 2024-05-22 16:30:09
+2024-05-22 16:30:17,589 - logs.logs - return of conn at 2024-05-22 16:30:09
+2024-05-22 16:33:23,158 - logs.logs - database conn activated at 2024-05-22 16:33:22
+2024-05-22 16:33:23,160 - logs.logs - return of conn at 2024-05-22 16:33:22
+2024-05-22 16:33:23,483 - logs.logs - database conn activated at 2024-05-22 16:33:22
+2024-05-22 16:33:23,485 - logs.logs - table history created at 2024-05-22 16:33:22
+2024-05-22 16:33:23,486 - logs.logs - table total created at 2024-05-22 16:33:22
+2024-05-22 16:33:23,487 - logs.logs - conn yeld at 2024-05-22 16:33:22
+2024-05-22 16:33:23,487 - logs.logs - return of conn at 2024-05-22 16:33:22
+2024-05-22 16:33:27,787 - logs.logs - database conn activated at 2024-05-22 16:33:22
+2024-05-22 16:33:27,894 - logs.logs - data sanitized: ticker=AAPL, amount=10 and date=2024-05-22 16:33:22 at 2024-05-22 16:33:22
+2024-05-22 16:33:27,908 - logs.logs - database conn activated at 2024-05-22 16:33:22
+2024-05-22 16:33:27,913 - logs.logs - ticker=AAPL, amount=10 | 2024-05-22 16:33:22 | SANITIZED
+2024-05-22 16:33:27,916 - logs.logs - ticker=AAPL, new_amount=10, total_amount= (updated) | 2024-05-22 16:33:22 | UPDATED
+2024-05-22 16:33:27,918 - logs.logs - conn yeld at 2024-05-22 16:33:22
+2024-05-22 16:33:27,919 - logs.logs - return of conn at 2024-05-22 16:33:22
+2024-05-22 16:33:27,920 - logs.logs - id=68A75CE226, ticker=AAPL, amount=10 | 2024-05-22 16:33:22 | ADDED
+2024-05-22 16:33:27,920 - logs.logs - conn yeld at 2024-05-22 16:33:22
+2024-05-22 16:33:27,921 - logs.logs - return of conn at 2024-05-22 16:33:22
+2024-05-22 16:35:37,415 - logs.logs - database conn activated at 2024-05-22 16:35:35
+2024-05-22 16:35:37,418 - logs.logs - return of conn at 2024-05-22 16:35:35
+2024-05-22 16:35:37,721 - logs.logs - database conn activated at 2024-05-22 16:35:35
+2024-05-22 16:35:37,723 - logs.logs - table history created at 2024-05-22 16:35:35
+2024-05-22 16:35:37,724 - logs.logs - table total created at 2024-05-22 16:35:35
+2024-05-22 16:35:37,725 - logs.logs - conn yeld at 2024-05-22 16:35:35
+2024-05-22 16:35:37,726 - logs.logs - return of conn at 2024-05-22 16:35:35
+2024-05-22 16:35:43,461 - logs.logs - database conn activated at 2024-05-22 16:35:35
+2024-05-22 16:35:43,559 - logs.logs - data sanitized: ticker=10, amount=30 and date=2024-05-22 16:35:35 at 2024-05-22 16:35:35
+2024-05-22 16:35:43,600 - logs.logs - database conn activated at 2024-05-22 16:35:35
+2024-05-22 16:35:43,609 - logs.logs - ticker=10, amount=30 | 2024-05-22 16:35:35 | SANITIZED
+2024-05-22 16:35:43,618 - logs.logs - ticker=10, new_amount=30, total_amount= (updated) | 2024-05-22 16:35:35 | UPDATED
+2024-05-22 16:35:43,619 - logs.logs - conn yeld at 2024-05-22 16:35:35
+2024-05-22 16:35:43,620 - logs.logs - return of conn at 2024-05-22 16:35:35
+2024-05-22 16:35:43,621 - logs.logs - id=14DEBB80F9, ticker=10, amount=30 | 2024-05-22 16:35:35 | ADDED
+2024-05-22 16:35:43,624 - logs.logs - conn yeld at 2024-05-22 16:35:35
+2024-05-22 16:35:43,625 - logs.logs - return of conn at 2024-05-22 16:35:35
+2024-05-22 16:35:53,854 - logs.logs - database conn activated at 2024-05-22 16:35:35
+2024-05-22 16:35:53,858 - logs.logs - data sanitized: ticker=AAPL, amount=90 and date=2024-05-22 16:35:35 at 2024-05-22 16:35:35
+2024-05-22 16:35:53,870 - logs.logs - database conn activated at 2024-05-22 16:35:35
+2024-05-22 16:35:53,874 - logs.logs - ticker=AAPL, amount=90 | 2024-05-22 16:35:35 | SANITIZED
+2024-05-22 16:35:53,879 - logs.logs - ticker=AAPL, new_amount=90, total_amount= (updated) | 2024-05-22 16:35:35 | UPDATED
+2024-05-22 16:35:53,881 - logs.logs - conn yeld at 2024-05-22 16:35:35
+2024-05-22 16:35:53,882 - logs.logs - return of conn at 2024-05-22 16:35:35
+2024-05-22 16:35:53,882 - logs.logs - id=EC61D39AFE, ticker=AAPL, amount=90 | 2024-05-22 16:35:35 | ADDED
+2024-05-22 16:35:53,883 - logs.logs - conn yeld at 2024-05-22 16:35:35
+2024-05-22 16:35:53,883 - logs.logs - return of conn at 2024-05-22 16:35:35
+2024-05-22 16:37:21,570 - logs.logs - database conn activated at 2024-05-22 16:37:20
+2024-05-22 16:37:21,571 - logs.logs - return of conn at 2024-05-22 16:37:20
+2024-05-22 16:37:21,999 - logs.logs - database conn activated at 2024-05-22 16:37:20
+2024-05-22 16:37:22,000 - logs.logs - table history created at 2024-05-22 16:37:20
+2024-05-22 16:37:22,002 - logs.logs - table total created at 2024-05-22 16:37:20
+2024-05-22 16:37:22,003 - logs.logs - conn yeld at 2024-05-22 16:37:20
+2024-05-22 16:37:22,005 - logs.logs - return of conn at 2024-05-22 16:37:20
+2024-05-22 16:37:26,451 - logs.logs - database conn activated at 2024-05-22 16:37:20
+2024-05-22 16:37:26,583 - logs.logs - data sanitized: ticker=AAPL, amount=20 and date=2024-05-22 16:37:20 at 2024-05-22 16:37:20
+2024-05-22 16:37:26,599 - logs.logs - database conn activated at 2024-05-22 16:37:20
+2024-05-22 16:37:26,604 - logs.logs - ticker=AAPL, amount=20 | 2024-05-22 16:37:20 | SANITIZED
+2024-05-22 16:37:26,607 - logs.logs - ticker=AAPL, new_amount=20, total_amount= (updated) | 2024-05-22 16:37:20 | UPDATED
+2024-05-22 16:37:26,609 - logs.logs - conn yeld at 2024-05-22 16:37:20
+2024-05-22 16:37:26,610 - logs.logs - return of conn at 2024-05-22 16:37:20
+2024-05-22 16:37:26,611 - logs.logs - id=6ECA88B7CA, ticker=AAPL, amount=20 | 2024-05-22 16:37:20 | ADDED
+2024-05-22 16:37:26,611 - logs.logs - conn yeld at 2024-05-22 16:37:20
+2024-05-22 16:37:26,612 - logs.logs - return of conn at 2024-05-22 16:37:20
+2024-05-22 16:58:14,721 - logs.logs - database conn activated at 2024-05-22 16:58:13
+2024-05-22 16:58:14,725 - logs.logs - return of conn at 2024-05-22 16:58:13
+2024-05-22 16:58:15,008 - logs.logs - database conn activated at 2024-05-22 16:58:13
+2024-05-22 16:58:15,010 - logs.logs - table history created at 2024-05-22 16:58:13
+2024-05-22 16:58:15,011 - logs.logs - table total created at 2024-05-22 16:58:13
+2024-05-22 16:58:15,011 - logs.logs - conn yeld at 2024-05-22 16:58:13
+2024-05-22 16:58:15,012 - logs.logs - return of conn at 2024-05-22 16:58:13
+2024-05-22 16:58:22,803 - logs.logs - database conn activated at 2024-05-22 16:58:13
+2024-05-22 16:58:22,833 - logs.logs - data sanitized: ticker=AAPL, amount=20 and date=2024-05-22 16:58:13 at 2024-05-22 16:58:13
+2024-05-22 16:58:22,854 - logs.logs - database conn activated at 2024-05-22 16:58:13
+2024-05-22 16:58:22,855 - logs.logs - ticker=AAPL, amount=20 | 2024-05-22 16:58:13 | SANITIZED
+2024-05-22 16:58:22,856 - logs.logs - ticker=AAPL, new_amount=20, total_amount= (updated) | 2024-05-22 16:58:13 | UPDATED
+2024-05-22 16:58:22,856 - logs.logs - conn yeld at 2024-05-22 16:58:13
+2024-05-22 16:58:22,856 - logs.logs - return of conn at 2024-05-22 16:58:13
+2024-05-22 16:58:22,856 - logs.logs - id=1B59B61379, ticker=AAPL, amount=20 | 2024-05-22 16:58:13 | ADDED
+2024-05-22 16:58:22,856 - logs.logs - conn yeld at 2024-05-22 16:58:13
+2024-05-22 16:58:22,856 - logs.logs - return of conn at 2024-05-22 16:58:13
+2024-05-22 17:04:23,138 - logs.logs - database conn activated at 2024-05-22 17:04:22
+2024-05-22 17:04:23,140 - logs.logs - return of conn at 2024-05-22 17:04:22
+2024-05-22 17:04:23,386 - logs.logs - database conn activated at 2024-05-22 17:04:22
+2024-05-22 17:04:23,387 - logs.logs - table history created at 2024-05-22 17:04:22
+2024-05-22 17:04:23,388 - logs.logs - table total created at 2024-05-22 17:04:22
+2024-05-22 17:04:23,389 - logs.logs - conn yeld at 2024-05-22 17:04:22
+2024-05-22 17:04:23,390 - logs.logs - return of conn at 2024-05-22 17:04:22
+2024-05-22 17:04:30,045 - logs.logs - database conn activated at 2024-05-22 17:04:22
+2024-05-22 17:04:30,151 - logs.logs - data sanitized: ticker=AAPL, amount=20 and date=2024-05-22 17:04:22 at 2024-05-22 17:04:22
+2024-05-22 17:04:30,169 - logs.logs - database conn activated at 2024-05-22 17:04:22
+2024-05-22 17:04:30,185 - logs.logs - ticker=AAPL, amount=20 | 2024-05-22 17:04:22 | SANITIZED
+2024-05-22 17:04:30,189 - logs.logs - ticker=AAPL, new_amount=20, total_amount= (updated) | 2024-05-22 17:04:22 | UPDATED
+2024-05-22 17:04:30,190 - logs.logs - conn yeld at 2024-05-22 17:04:22
+2024-05-22 17:04:30,191 - logs.logs - return of conn at 2024-05-22 17:04:22
+2024-05-22 17:04:30,192 - logs.logs - id=FA11F63F16, ticker=AAPL, amount=20 | 2024-05-22 17:04:22 | ADDED
+2024-05-22 17:04:30,193 - logs.logs - conn yeld at 2024-05-22 17:04:22
+2024-05-22 17:04:30,194 - logs.logs - return of conn at 2024-05-22 17:04:22
+2024-05-22 17:10:28,936 - logs.logs - database conn activated at 2024-05-22 17:10:21
+2024-05-22 17:10:28,939 - logs.logs - return of conn at 2024-05-22 17:10:21
+2024-05-22 17:10:29,995 - logs.logs - database conn activated at 2024-05-22 17:10:21
+2024-05-22 17:10:29,997 - logs.logs - table history created at 2024-05-22 17:10:21
+2024-05-22 17:10:29,998 - logs.logs - table total created at 2024-05-22 17:10:21
+2024-05-22 17:10:29,998 - logs.logs - conn yeld at 2024-05-22 17:10:21
+2024-05-22 17:10:29,999 - logs.logs - return of conn at 2024-05-22 17:10:21
+2024-05-22 17:10:36,400 - logs.logs - database conn activated at 2024-05-22 17:10:21
+2024-05-22 17:10:36,522 - logs.logs - data sanitized: ticker=AAPL, amount=90 and date=2024-05-22 17:10:21 at 2024-05-22 17:10:21
+2024-05-22 17:10:36,551 - logs.logs - database conn activated at 2024-05-22 17:10:21
+2024-05-22 17:10:36,557 - logs.logs - ticker=AAPL, amount=90 | 2024-05-22 17:10:21 | SANITIZED
+2024-05-22 17:10:36,563 - logs.logs - ticker=AAPL, new_amount=90, total_amount= (updated) | 2024-05-22 17:10:21 | UPDATED
+2024-05-22 17:10:36,570 - logs.logs - conn yeld at 2024-05-22 17:10:21
+2024-05-22 17:10:36,571 - logs.logs - return of conn at 2024-05-22 17:10:21
+2024-05-22 17:10:36,571 - logs.logs - id=3CA039F0FD, ticker=AAPL, amount=90 | 2024-05-22 17:10:21 | ADDED
+2024-05-22 17:10:36,572 - logs.logs - conn yeld at 2024-05-22 17:10:21
+2024-05-22 17:10:36,573 - logs.logs - return of conn at 2024-05-22 17:10:21
+2024-05-22 17:12:15,496 - logs.logs - database conn activated at 2024-05-22 17:12:13
+2024-05-22 17:12:15,498 - logs.logs - return of conn at 2024-05-22 17:12:13
+2024-05-22 17:12:16,531 - logs.logs - database conn activated at 2024-05-22 17:12:13
+2024-05-22 17:12:16,533 - logs.logs - table history created at 2024-05-22 17:12:13
+2024-05-22 17:12:16,534 - logs.logs - table total created at 2024-05-22 17:12:13
+2024-05-22 17:12:16,534 - logs.logs - conn yeld at 2024-05-22 17:12:13
+2024-05-22 17:12:16,535 - logs.logs - return of conn at 2024-05-22 17:12:13
+2024-05-22 17:12:22,160 - logs.logs - database conn activated at 2024-05-22 17:12:13
+2024-05-22 17:12:22,285 - logs.logs - data sanitized: ticker=AAPL, amount=100 and date=2024-05-22 17:12:13 at 2024-05-22 17:12:13
+2024-05-22 17:12:22,301 - logs.logs - database conn activated at 2024-05-22 17:12:13
+2024-05-22 17:12:22,305 - logs.logs - ticker=AAPL, amount=100 | 2024-05-22 17:12:13 | SANITIZED
+2024-05-22 17:12:22,325 - logs.logs - ticker=AAPL, total_amount=1301 | 2024-05-22 17:12:13 | TOTAL ADDED
+2024-05-22 17:12:22,327 - logs.logs - ticker=AAPL, new_amount=100 | 2024-05-22 17:12:13 | UPDATED
+2024-05-22 17:12:22,333 - logs.logs - conn yeld at 2024-05-22 17:12:13
+2024-05-22 17:12:22,334 - logs.logs - return of conn at 2024-05-22 17:12:13
+2024-05-22 17:12:22,334 - logs.logs - id=08BC02D1FA, ticker=AAPL, amount=100 | 2024-05-22 17:12:13 | ADDED
+2024-05-22 17:12:22,335 - logs.logs - conn yeld at 2024-05-22 17:12:13
+2024-05-22 17:12:22,335 - logs.logs - return of conn at 2024-05-22 17:12:13
+2024-05-22 17:19:13,242 - logs.logs - database conn activated at 2024-05-22 17:19:12
+2024-05-22 17:19:13,244 - logs.logs - return of conn at 2024-05-22 17:19:12
+2024-05-22 17:19:14,088 - logs.logs - database conn activated at 2024-05-22 17:19:12
+2024-05-22 17:19:14,090 - logs.logs - table history created at 2024-05-22 17:19:12
+2024-05-22 17:19:14,091 - logs.logs - table total created at 2024-05-22 17:19:12
+2024-05-22 17:19:14,092 - logs.logs - conn yeld at 2024-05-22 17:19:12
+2024-05-22 17:19:14,094 - logs.logs - return of conn at 2024-05-22 17:19:12
+2024-05-22 17:19:42,519 - logs.logs - database conn activated at 2024-05-22 17:19:41
+2024-05-22 17:19:42,522 - logs.logs - return of conn at 2024-05-22 17:19:41
+2024-05-22 17:19:42,844 - logs.logs - database conn activated at 2024-05-22 17:19:41
+2024-05-22 17:19:42,847 - logs.logs - table history created at 2024-05-22 17:19:41
+2024-05-22 17:19:42,849 - logs.logs - table total created at 2024-05-22 17:19:41
+2024-05-22 17:19:42,850 - logs.logs - conn yeld at 2024-05-22 17:19:41
+2024-05-22 17:19:42,850 - logs.logs - return of conn at 2024-05-22 17:19:41
+2024-05-22 17:19:46,684 - logs.logs - database conn activated at 2024-05-22 17:19:41
+2024-05-22 17:19:46,685 - logs.logs - return of conn at 2024-05-22 17:19:41
