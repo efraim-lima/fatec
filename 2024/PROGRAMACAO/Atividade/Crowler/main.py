@@ -25,9 +25,14 @@ def start():
         db.create_purchases()
         while True:
             financ = int(input("""Qual operação gostaria de fazer?
-                1- COMPRAR
-                2- VENDER
-                3- SAIR\n"""))
+    0- EXTRATO
+    1- COMPRAR
+    2- VENDER
+    3- DILUIR POSIÇÃO
+    4- SAIR\n"""))
+            if financ == 0:
+                extract()
+                continue
             if financ == 1:
                 ticker = input("Insira o ticker do ativo que deseja comprar agora (exemplo: AAPL):\n")
                 amount = int(input("Insira a quantidade de ativos que deseja comprar:\n"))
@@ -35,29 +40,65 @@ def start():
                 if isinstance(ticker, str) and isinstance(amount, int):
                     db.insert(ticker.upper(), amount, now)
                     print("\n\nFeito!\n\n")
-                    sleep(3)
+                    sleep(2)
                 else:
                     print("Algo deu errado, por favor, entre o valor novamente.")
+                continue
             elif financ == 2:
                 ticker = input("Insira o ticker do ativo que deseja vender agora (exemplo: AAPL):\n")
                 amount = int(input("Insira a quantidade de ativos que deseja vender:\n"))
                 if isinstance(ticker, str) and isinstance(amount, int):
-                    db.delete(ticker.upper(), amount, now)
-                    print("\n\nFeito!\n\n")
-                    sleep(3)
+                    ticker = ticker.upper()
+                    
+                    total_amount = db.total(ticker)
+                    
+                    if amount <= total_amount:
+                        db.sell(ticker, total_amount, amount, now)
+                        print("\n\nFeito!\n\n")
+                        sleep(2)
+                    elif amount > total_amount:
+                        print(f"Você não pode vender {amount} cotas de {ticker}\nQuantidade disponível:\n\n{ticker}: {total_amount}\n")
+                        critic(f"ticker={ticker}, amount={amount} | {now} | SELLING REFUSED")
+                    else:
+                        print("Algo deu errado")
                 else:
                     print("Algo deu errado, por favor, entre o valor novamente.")
+                continue
             elif financ == 3:
+                ticker = input("Insira o ticker do ativo que deseja diluir posição \n\n(Exemplo: AAPL):\n")
+                
+                ticker = ticker.upper()
+                total_amount = db.total(ticker)
+                response = input(f"Tem certeza que deseja vender {total_amount} cotas do ativo {ticker}?\n\n[S/N]")
+                
+                if response.upper() == "S":
+                    if isinstance(ticker, str):
+                        
+                        if total_amount:
+                            actual_amount = 0
+                            db.sell(ticker, actual_amount, total_amount, now)
+                            db.delete(ticker)
+                            print("\n\nFeito!\n\n")
+                            sleep(2)
+                        else:
+                            print("Algo deu errado")
+                    else:
+                        print("Algo deu errado, por favor, entre o valor novamente.")
+                    continue
+                elif response.upper() == "N":
+                    print("Operação cancelada!")
+                else:
+                    print("Não te entendi, repita")
+            elif financ == 4:
                 print("Obrigado pela preferência!")
                 break
             else:
                 print("Não entendi, por favor, digite novamente")
     
-    condition = input("Quer consultar as operações financeiras que já havia feito anteriormente? [S/N]\n")
+    condition = input("Quer consultar seus ativos? [S/N]\n")
 
     if condition.upper() == "S":
-        results = db.read()
-        print(results)
+        extract()
 
         conditionII = input("Quer efetuar uma operação financeira agora? [S/N]\n")
         if conditionII.upper() == "S":
@@ -66,16 +107,30 @@ def start():
         if conditionII.upper() == "N":
             print("Obrigado pela preferencia, volte sempre!")
             return
-            if conditionII.upper() == "S":
-                operation()
-            elif conditionII.upper() == "N":
-                print("Compreendo, espero poder ajudar melhor posteriormente\nObrigado pela preferencia, volte sempre!")
-                return
-            else:
-                print("Acho que não entendi, tente novamente.")
     else:
         print("Obrigado pela preferencia, volte sempre\n")
             
+def extract():
+        results = db.read()
+        
+        print("""
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+                  
+|           Ativo           |       Quantidade        |       Ultima Atualização        |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+""")
+        if results:
+            for result in results:
+                
+                ticker=result[0]
+                total=result[1]
+                date=result[2]
+                
+                print(f"""|           {ticker}            |           {total}             |       {date}       |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+""")
+        else:
+            print("""|                                         EMPTY                                         |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+""")
+
 
 def is_business_day(date):
     # Check if the day is a weekday (Monday=0, Sunday=6)
