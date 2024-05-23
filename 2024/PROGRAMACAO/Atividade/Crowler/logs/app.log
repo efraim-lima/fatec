@@ -2759,3 +2759,80 @@ None
 2024-05-23 16:09:37,577 - logs.logs - history readed | 2024-05-23 16:09:20 | READED
 2024-05-23 16:09:37,577 - logs.logs - conn | 2024-05-23 16:09:20 | YELD
 2024-05-23 16:09:37,578 - logs.logs - conn | 2024-05-23 16:09:20 | RETURN
+2024-05-23 16:15:50,861 - logs.logs - database | 2024-05-23 16:15:47 | ACTIVATED
+2024-05-23 16:15:50,866 - logs.logs - history readed | 2024-05-23 16:15:47 | READED
+2024-05-23 16:15:50,867 - logs.logs - conn | 2024-05-23 16:15:47 | YELD
+2024-05-23 16:15:50,868 - logs.logs - conn | 2024-05-23 16:15:47 | RETURN
+2024-05-23 16:17:40,963 - logs.logs - database | 2024-05-23 16:17:36 | ACTIVATED
+2024-05-23 16:17:40,967 - logs.logs - history readed | 2024-05-23 16:17:36 | READED
+2024-05-23 16:17:40,969 - logs.logs - conn | 2024-05-23 16:17:36 | YELD
+2024-05-23 16:17:40,970 - logs.logs - conn | 2024-05-23 16:17:36 | RETURN
+2024-05-23 16:18:20,927 - logs.logs - database | 2024-05-23 16:18:18 | ACTIVATED
+2024-05-23 16:18:20,929 - logs.logs - history readed | 2024-05-23 16:18:18 | READED
+2024-05-23 16:18:20,931 - logs.logs - conn | 2024-05-23 16:18:18 | YELD
+2024-05-23 16:18:20,932 - logs.logs - conn | 2024-05-23 16:18:18 | RETURN
+2024-05-23 16:18:22,753 - logs.logs - database | 2024-05-23 16:18:18 | ACTIVATED
+2024-05-23 16:18:22,754 - logs.logs - table history | 2024-05-23 16:18:18 | CREATED
+2024-05-23 16:18:22,755 - logs.logs - table total | 2024-05-23 16:18:18 | CREATED
+2024-05-23 16:18:22,756 - logs.logs - conn | 2024-05-23 16:18:18 | YELD
+2024-05-23 16:18:22,772 - logs.logs - conn | 2024-05-23 16:18:18 | RETURN
+2024-05-23 16:18:24,944 - logs.logs - database | 2024-05-23 16:18:18 | ACTIVATED
+2024-05-23 16:18:24,946 - logs.logs - history readed | 2024-05-23 16:18:18 | READED
+2024-05-23 16:18:24,946 - logs.logs - conn | 2024-05-23 16:18:18 | YELD
+2024-05-23 16:18:24,947 - logs.logs - conn | 2024-05-23 16:18:18 | RETURN
+2024-05-23 16:18:41,595 - logs.logs - database | 2024-05-23 16:18:18 | ACTIVATED
+2024-05-23 16:18:41,717 - logs.logs - total=<function total at 0x7ef59ab9d300>, ticker=AAPL, amount=10 | 2024-05-23 16:18:18 | INSERTED DATA
+2024-05-23 16:18:41,719 - logs.logs - database | 2024-05-23 16:18:18 | ACTIVATED
+2024-05-23 16:18:41,720 - logs.logs - ENTREI POOOO
+2024-05-23 16:18:41,722 - logs.logs - 
+None
+
+
+
+2024-05-23 16:18:41,724 - logs.logs - ticker=AAPL, total=170 | 2024-05-23 16:18:18 | TOTAL GOT ON TRY
+2024-05-23 16:18:41,724 - logs.logs - conn | 2024-05-23 16:18:18 | YELD
+2024-05-23 16:18:41,725 - logs.logs - conn | 2024-05-23 16:18:18 | RETURN
+2024-05-23 16:18:41,727 - logs.logs - database | 2024-05-23 16:18:18 | ACTIVATED
+2024-05-23 16:18:41,733 - logs.logs - ticker=AAPL, amount=10 | 2024-05-23 16:18:18 | UPDATE DATA SANITIZED
+2024-05-23 16:18:41,741 - logs.logs - conn | 2024-05-23 16:18:18 | RETURN
+2024-05-23 16:18:41,741 - logs.logs - id=7A3A6EE3CD, ticker=AAPL, amount=10 | 2024-05-23 16:18:18 | ADDED
+2024-05-23 16:18:41,742 - logs.logs - conn | 2024-05-23 16:18:18 | YELD
+2024-05-23 16:18:41,743 - logs.logs - conn | 2024-05-23 16:18:18 | RETURN
+2024-05-23 16:18:50,459 - logs.logs - database | 2024-05-23 16:18:18 | ACTIVATED
+2024-05-23 16:18:50,461 - logs.logs - history readed | 2024-05-23 16:18:18 | READED
+2024-05-23 16:18:50,462 - logs.logs - conn | 2024-05-23 16:18:18 | YELD
+2024-05-23 16:18:50,463 - logs.logs - conn | 2024-05-23 16:18:18 | RETURN
+2024-05-23 16:19:20,187 - logs.logs - database | 2024-05-23 16:18:18 | ACTIVATED
+2024-05-23 16:19:20,213 - logs.logs - total=<function total at 0x7ef59ab9d300>, ticker=AAPL, amount=40 | 2024-05-23 16:18:18 | INSERTED DATA
+2024-05-23 16:19:20,214 - logs.logs - database | 2024-05-23 16:18:18 | ACTIVATED
+2024-05-23 16:19:20,215 - logs.logs - ENTREI POOOO
+2024-05-23 16:19:20,216 - logs.logs - ticker=AAPL, total=10 | 2024-05-23 16:18:18 | TOTAL CHECKED
+2024-05-23 16:19:20,217 - logs.logs - conn | 2024-05-23 16:18:18 | YELD
+2024-05-23 16:19:20,217 - logs.logs - conn | 2024-05-23 16:18:18 | RETURN
+2024-05-23 16:19:20,219 - logs.logs - database | 2024-05-23 16:18:18 | ACTIVATED
+2024-05-23 16:19:20,224 - logs.logs - ticker=AAPL, amount=40 | 2024-05-23 16:18:18 | UPDATE DATA SANITIZED
+2024-05-23 16:19:20,228 - logs.logs - ticker=AAPL, new_amount=40 | 2024-05-23 16:18:18 | UPDATED
+2024-05-23 16:19:20,233 - logs.logs - conn | 2024-05-23 16:18:18 | YELD
+2024-05-23 16:19:20,234 - logs.logs - conn | 2024-05-23 16:18:18 | RETURN
+2024-05-23 16:19:20,235 - logs.logs - id=B6C8B400CC, ticker=AAPL, amount=40 | 2024-05-23 16:18:18 | ADDED
+2024-05-23 16:19:20,235 - logs.logs - conn | 2024-05-23 16:18:18 | YELD
+2024-05-23 16:19:20,236 - logs.logs - conn | 2024-05-23 16:18:18 | RETURN
+2024-05-23 16:19:28,222 - logs.logs - database | 2024-05-23 16:18:18 | ACTIVATED
+2024-05-23 16:19:28,224 - logs.logs - history readed | 2024-05-23 16:18:18 | READED
+2024-05-23 16:19:28,226 - logs.logs - conn | 2024-05-23 16:18:18 | YELD
+2024-05-23 16:19:28,227 - logs.logs - conn | 2024-05-23 16:18:18 | RETURN
+2024-05-23 16:19:42,534 - logs.logs - database | 2024-05-23 16:18:18 | ACTIVATED
+2024-05-23 16:19:42,535 - logs.logs - ENTREI POOOO
+2024-05-23 16:19:42,536 - logs.logs - ticker=AAPL, total=50 | 2024-05-23 16:18:18 | TOTAL CHECKED
+2024-05-23 16:19:42,538 - logs.logs - conn | 2024-05-23 16:18:18 | YELD
+2024-05-23 16:19:42,539 - logs.logs - conn | 2024-05-23 16:18:18 | RETURN
+2024-05-23 16:19:42,540 - logs.logs - database | 2024-05-23 16:18:18 | ACTIVATED
+2024-05-23 16:19:42,546 - logs.logs - ticker=AAPL, amount=20 | 2024-05-23 16:18:18 | DATA SANITIZED
+2024-05-23 16:19:42,550 - logs.logs - database | 2024-05-23 16:18:18 | ACTIVATED
+2024-05-23 16:19:42,551 - logs.logs - ENTREI POOOO
+2024-05-23 16:19:42,552 - logs.logs - ticker=AAPL, total=50 | 2024-05-23 16:18:18 | TOTAL CHECKED
+2024-05-23 16:19:42,553 - logs.logs - conn | 2024-05-23 16:18:18 | YELD
+2024-05-23 16:19:42,553 - logs.logs - conn | 2024-05-23 16:18:18 | RETURN
+2024-05-23 16:19:42,561 - logs.logs - ticker=AAPL, new_amount=20 | 2024-05-23 16:18:18 | SOLD
+2024-05-23 16:19:42,572 - logs.logs - conn | 2024-05-23 16:18:18 | YELD
+2024-05-23 16:19:42,573 - logs.logs - conn | 2024-05-23 16:18:18 | RETURN
