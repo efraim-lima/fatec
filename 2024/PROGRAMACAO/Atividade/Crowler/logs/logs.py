@@ -5,7 +5,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import logging
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.CRITICAL)
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(message)s')
 
 file_handler = logging.FileHandler('./logs/app.log')

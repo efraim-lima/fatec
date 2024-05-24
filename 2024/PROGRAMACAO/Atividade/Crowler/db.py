@@ -4,6 +4,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '.')))
 
 import bleach
 import datetime
+import json
 import sqlite3
 import re
 import uuid
@@ -30,7 +31,7 @@ def get_db_connection():
         warn(f"conn | {now} | RETURN")
         return
 
-def create_purchases():
+def create():
     with get_db_connection() as conn:
         cursor = conn.cursor()
         cursor.execute("""CREATE TABLE IF NOT EXISTS history (
@@ -51,11 +52,22 @@ def create_purchases():
                         );""")
         warn(f"table total | {now} | CREATED")
 
+        cursor.execute("""CREATE TABLE IF NOT EXISTS stocks (
+                            ticker TEXT,
+                            high REAL,
+                            low REAL,
+                            close REAL,
+                            open REAL,
+                            volume INTEGER,
+                            VWAP REAL,
+                            date DATE NOT NULL
+                        );""")
+        warn(f"table stocks | {now} | CREATED")
+
         conn.commit()
 
 def total(ticker):
         with get_db_connection() as conn:
-            warn("ENTREI POOOO")
             cursor = conn.cursor()
             cursor.execute("SELECT total_id, amount FROM total WHERE ticker=:ticker;", {'ticker': ticker})
             one = cursor.fetchone()
@@ -66,7 +78,6 @@ def total(ticker):
                 info(f"ticker={ticker}, total={total_amount} | {now} | TOTAL CHECKED")
                 return total_amount
             else:
-                info(f"\n{one}\n\n\n")
                 try:
                     cursor.execute("SELECT id, amount FROM history WHERE ticker = :ticker", {'ticker': ticker})
                     existing_tickers = cursor.fetchall()
@@ -129,12 +140,8 @@ def insert(ticker, amount, now):
             info(f"total={total}, ticker={ticker}, amount={amount} | {now} | INSERTED DATA")
             total_amount = total(ticker)
             
-            print(f"\n\nTOTAL:\n{total_amount}\n\n")
-            
             if total_amount:
-                print(total_amount)
                 try:
-                    print(ticker, amount, id)
                     update(ticker, amount, id)
                 except:
                     warn(f"ticker={ticker} | {now} | UPDATE FAILED")
@@ -236,6 +243,70 @@ def delete(ticker):
             else:
                 print("Error!")
                 critic(f"ticker={ticker} | {now} | TICKER NOT FOUND")
+
+def check_stocks():
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+
+        cursor.execute("SELECT ticker, high, low, close, open, volume, vwap, date FROM stocks;")
+        one = cursor.fetchall()
+
+        dados = []
+        if one:
+            for i in one:
+                row = {"T": i[0],
+                    "h": i[1],
+                    "l": i[2],
+                    "c": i[3],
+                    "o": i[4],
+                    "v": i[5],
+                    "vw": i[6]}
+                dados.append(row)
+
+            dados = {"results": dados}
+            return json.dumps(dados, indent=1)
+        else:
+            return False
+    
+
+def insert_stocks(ticker,high,low,close,oppen,volume,vwap):
+    with get_db_connection() as conn:
+        if validation(ticker) == True:
+            ticker = bleach.clean(ticker)
+    
+            cursor = conn.cursor()
+
+            cursor.execute("""INSERT INTO stocks (ticker, high, low, close, open, volume, vwap, date) VALUES (
+                            :ticker,
+                            :high,
+                            :low,
+                            :close,
+                            :open,
+                            :volume,
+                            :vwap,
+                            :date
+                            );""", {
+                                'ticker':ticker,
+                                'high':high,
+                                'low':low,
+                                'close':close,
+                                'open':oppen,
+                                'volume':volume,
+                                'vwap':vwap,
+                                'date':now
+                            })
+            conn.commit()
+            warn(f"ticker={ticker} | {now} | STOCKS INSERTED")
+
+def tickers():
+  with get_db_connection() as conn:
+    cursor = conn.cursor()
+    cursor.execute("SELECT ticker FROM stocks;")
+    all_tickers = []
+    for row in cursor.fetchall():
+      all_tickers.append(row[0])  # Assuming ticker is the first column
+    return all_tickers
+
 
 def sell(ticker, total_amount, amount, now):
     with get_db_connection() as conn:
