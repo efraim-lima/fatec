@@ -1,0 +1,9 @@
+- 3 way handshake
+- protocolos de rede
+- modelos OSI e TCP/IP
+- Encapsulamento
+- portas de rede
+- apis
+- postman
+- buffer (sala de espera)
+- buffer de transmissão e recepção
