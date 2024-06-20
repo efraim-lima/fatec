@@ -1,0 +1,240 @@
+Configurações de roteador de borda
+Physical:
+-Inserir roteador 1841
+-Desligar router
+-Inserir 2 adaptadores WIC-1T
+-Religar router
+
+Logical:
+-no terminal seguir os comandos:
+	`enable`
+		Verificar interfaces e configurações das mesmas (vamos precisar algumas vezes disso mais pra frennte)
+		`show ip interface brief`
+		`configure terminal`
+			`hostname <nome-do-dispositivo>`
+			`enable secret <senha>`
+			`line console 0`
+				`password <senha>`
+				`exec-timeout 0 5`
+				`login`
+				`exit`
+			`line vty 0 4`
+				`password <senha>`
+				`exec-timeout 0 5`
+				`login`
+				`exit`
+			`service password-encryption`
+			`banner motd #` 
+-- Inserir texto abaixo:
+`!!!ATENCAO!!!
+
+Voce esta em um ambiente de rede privada.
+Todo acesso nao autorizado nao e permitido e pode ser penalizado de acordo com o regimento de leis em conformidade com os orgaos responsaveis.
+
+Atualmente voce se contra no roteador $(hostname), pertencente ao dominio $(domain).
+Configurando $(line).
+
+
+Projeto de redes no Packet Tracer!.
+#`
+
+			Configurando IPs nas interfaces (replicar para cada interface)
+			`interface <interface><numero da interface>`
+				`ip address <ip><mascara de rede>`
+				`no shutdown`
+				`exit`
+			No caso de configurar conexões seriais acho importante apresentar algumas alterações necessárias
+			`interface serial <numero da interface>`
+				`ip address <endereço do gateway><mascara de rede>`
+				`no shutdown`
+				`exit`
+			Para configurar um dhcp pool, que garantirá redundância no critério de servidores DNS
+			`ip dhcp pool DNS-Pool`
+				`network <IP de rede dos servers> <mascara de rede>`
+				`default-router <IP do gateway da rede dos servidores>`
+				`dns-server <IP do servidor primario> <IP do servidor secundario>`
+				`exit`
+
+			Caso queira remover tais servidores do DHCP Pool
+			`ip dhcp excluded-address <IP do servidor primario> <IP do servidor secundario>` 
+			`router rip`
+				`version 2`
+				`network <endereço de IP da rede>`
+				`passive-interface <interface cujo não quer que faça parte das atualizações do RIP>`'
+				`exit`
+
+			`exit`
+		`exit`
+	`copy running-config startup-config`
+
+
+Para configurar mais rapidamente outros routers basta ir nas configurações globais e seguir os seguintes passos:
+`enable`
+	`show running-config`
+	usar o comando de copiar do CLI
+	abrir um editor de texto e alterar as configurações que precisam ser diferenciadas entre os dispositivos (IP, spanning-tree, speeds, rip networks e afins)
+	Voltar ao pkt tracer
+Selecionar outro dispositivo
+Ir ao CLI
+Ir até as configurações globais:
+`enable`
+	`configure terminal`
+		Colar o texto editado no editor de texto
+		Verificar se está tudo de acordo:
+		`exit`
+	`show running-config`
+	Se estiver tudo correto, salvar
+	`copy running-config startup-config`
+
+
+
+
+
+
+
+
+
+
+
+
+Ao fim, usando `show running-config` deve aparecer um script semelhante a este:
+
+`
+Building configuration...
+
+Current configuration : 1555 bytes
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R1
+!
+!
+!
+enable secret 5 $1$mERr$WwfYkWJNgzhVOU1fKBqJ9/
+!
+!
+!
+ip dhcp pool Primario
+ network 20.0.0.0 255.255.255.0
+ default-router 20.0.0.1
+ dns-server 20.0.0.3
+ exit
+ip dhcp pool Secundario
+ network 20.0.0.0 255.255.255.0
+ default-router 20.0.0.1
+ dns-server 20.0.0.2
+ exit
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree portfast default
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 20.0.0.1 255.255.255.0
+ duplex auto
+ speed 100
+ no shutdown
+ exit
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ no shutdown
+ exit
+!
+interface Serial0/0/0
+ ip address 15.0.0.1 255.255.255.0
+ no shutdown
+ exit
+!
+interface Serial0/1/0
+ ip address 16.0.0.1 255.255.255.0
+ no shutdown
+ exit
+!
+interface Vlan1
+ ip address 192.168.11.1 255.255.255.0
+ no shutdown
+ exit
+!
+router rip
+ version 2
+ network 15.0.0.0
+ network 16.0.0.0
+ network 20.0.0.0
+ exit
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+banner motd ^C
+
+!!!ATENCAO!!!
+
+
+
+Voce esta em um ambiente de rede privada.
+
+Todo acesso nao autorizado nao e permitido e pode ser penalizado de acordo com o regimento de leis em conformidade com os orgaos responsaveis.
+
+
+
+Atualmente voce se contra no roteador $(hostname), pertencente ao dominio $(domain).
+
+Configurando $(line).
+
+
+
+
+
+Projeto de redes no Packet Tracer!.
+
+^C
+!
+!
+!
+!
+!
+line con 0
+ exec-timeout 5 0
+ password 7 0822455D0A1606181C1803082F
+ login
+!
+line aux 0
+!
+line vty 0 4
+ exec-timeout 5 0
+ password 7 0822455D0A1611121E050910
+ login
+!
+!
+!
+end
+`

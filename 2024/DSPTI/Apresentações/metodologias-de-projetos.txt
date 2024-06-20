@@ -1,0 +1,22 @@
+Metodologias servem para auxiliar em tipos de projetos diferentes
+
+Scrum: dividos em sprints separados por semanas, com claras atribuições aos seus presentes
+	Sprint Planning -> planejamento para mensurar as atividades e quanto tempo pode levar cada uma
+	Daily -> reuniões diarias onde todos apresentam suas atividades e seus entregaveis do dia
+	Sprint Review -> analisa o que já foi feito, atualizando o que ainda precisa ser feito
+	Retro -> analisa os principais pontos do que houve nos processos anteriores, com objetivo de não cometer os mesmos erros e manter as boas praticas.
+
+
+Waterfall (Cascata): sempre depende da etapa anterior concluida para seguir em frente
+	Coleta de Requisitos: levantar os requisitos com stakeholders para definir custos, recursos e mão de obra
+	Design -> quais linguagens serão usadas, quais tecnologias adotadas 
+	Implementação -> momento de inserir no ambiente de produção
+	Verificação -> momento de analise que define se o sistema está operando
+	Manutenção -> momento de analise constante do que foi implementado para intervir em casos de falha
+
+Agile: abordaem de gerenciamento de projetos com entregas incrementais e iterativas, adotou algumas premissas de Waterfall e Scrum para ter um melhor resultado
+	Individuos e interações -> compreender quem será o responsável por cada tarefa e saber acionar de acordo com as necessidades
+	Software funcional -> *
+	Colaboração com o cliente -> *
+	Responder a mudanças -> *
+	

@@ -1,0 +1,11 @@
+Manutenção é toda e quaquer ação com o objetivo de manter o sistema em operação, seja prevenindo, corrigindo o prevendo falhas.
+
+A manutenção preditiva monitora continuamente os dispositivos através de sensores, analisando temperatura, posição, pressão, vibração desempenho, voltagem e corrente.
+Até os dispositivos de prevenção precisam de manutenção
+
+Permite que ocorram paradas estritamente necessárias e a manutenção pode ser feita em momentos programados evitando paradas no sistema.
+O maior problema da preditiva é que o custo é elevado, necessita de treinamento para seu uso, as previsões podem passar por problemas de confiabilidade e os sensores também dependem de manutenção.
+
+A manutenção preventiva é aquela que é realizada em momentos estratégicos, com o objetivo de evitar paradas inesperadas. Possui certos custos por depender de equipamento e mão de obra, o tempo de parada é estimado
+
+A manutenção corretiva é aquela que ocorre apenas quando um dispositivo atinge seu ponto de falha, ela é a mais arriscada de todas, pois o problema primeiro aparece para depois fazer apenas a manutenção.O processo da corretiva é mais flexivel e mais simples, por conta de fatores como este é muito adotada por empresas que possuem recursos limitados. Mas ocorre que os reparos de emergência são mais caros, a falha ocorre em momentos ineperados (podendo ser em horarios de maior movimento) e traz muitos riscos à segurança tanto da empresa quanto de seus funcionarios.
