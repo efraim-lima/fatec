@@ -10,10 +10,18 @@
 - buffer (sala de espera)
 - buffer de transmissão e recepção
 
+- GitHub 
+- comandos básicos
+- pra quê usar no dia a dia
+- como criar um repositório
+- como administrar um repositório
+- como organizar um repositório
+- como excluir um repositório
+- boas práticas de administração
+
 - sistema de arquivos linux
 - rwx linux
 - chmod 777 linux
-
 
 - malwares
 - como criar um malware simples
