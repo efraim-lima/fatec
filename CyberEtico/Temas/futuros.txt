@@ -13,6 +13,7 @@
 - GitHub 
 - comandos básicos
 - pra quê usar no dia a dia
+- criando um belo README.md
 - como criar um repositório
 - como administrar um repositório
 - como organizar um repositório
