@@ -89,14 +89,14 @@ mail    IN      A       20.0.0.3
 EOT"
 
 sudo bash -c "cat > /etc/bind/named.conf.local << 'EOT'
-zone $DOMINIO {
+zone "$DOMINIO" {
     type master;
-    file $ZONAS_DOMINIO;
+    file "$ZONAS_DOMINIO";
     allow-transfer { $DNSA; };
 };    
 zone "$IPR.in-addr.arpa" {
     type master;
-    file $ZONAS_IP;
+    file "$ZONAS_IP";
     allow-transfer { $DNSA; };
 };
 EOT"
