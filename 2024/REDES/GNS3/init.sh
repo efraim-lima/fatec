@@ -54,6 +54,7 @@ sudo bash -c "cat > $ZONAS_IP << 'EOT'
 2       IN      PTR     www.pastel.com.
 2       IN      PTR     ns1.pastel.com.
 2       IN      PTR     mail.pastel.com.
+3       IN      PTR     mail.pastel.com.
 3       IN      PTR     ns2.pastel.com.
 ;
 EOT"
@@ -67,23 +68,23 @@ fi
 sudo bash -c "cat > $ZONAS_DOMINIO << 'EOT'
 ; BIND reverso para rede do IP local
 ;
-\$TTL    604800
-@	IN	SOA	ns.pastel.com.	root.pastel.com. (
-			2		; Serial
-			604800		; Refresh
-			86400		; Retry
-			2419200		; Expire
-			604800 )	; Negative Cache TTL
-;
-@	IN	NS	ns1.pastel.com.
-@	IN	NS	ns2.pastel.com.
-@	IN	A	20.0.0.2
+$TTL    604800
+@       IN      SOA     ns1.pastel.com. root.pastel.com. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+
+@       IN      NS      ns1.pastel.com.
+@       IN      NS      ns2.pastel.com.
+@       IN      MX      10 mail.pastel.com.
 @       IN      A       20.0.0.2
 www     IN      A       20.0.0.2
 ns1     IN      A       20.0.0.2
 ns2     IN      A       20.0.0.3
 mail    IN      A       20.0.0.2
-mail	IN	A	20.0.0.3
+mail    IN      A       20.0.0.3
 ;
 EOT"
 
