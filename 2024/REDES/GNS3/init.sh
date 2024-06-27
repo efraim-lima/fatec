@@ -182,9 +182,16 @@ add_mail_user() {
 
 # Configurar o Dovecot
 echo "protocols = imap pop3 lmtp" >> /etc/dovecot/dovecot.conf
-sed -i 's|#mail_location =|mail_location = maildir:~/Maildir|' /etc/dovecot/conf.d/10-mail.conf
-sed -i 's|#disable_plaintext_auth = yes|disable_plaintext_auth = no|' /etc/dovecot/conf.d/10-auth.conf
-sed -i 's|auth_mechanisms = plain|auth_mechanisms = plain login|' /etc/dovecot/conf.d/10-auth.conf
+
+sudo cat << EOL > /etc/dovecot/conf.d/10-mail.conf
+mail_location = maildir:~/Maildir
+disable_plaintext_auth = no
+auth_mechanisms = plain login
+EOL
+
+sudo cat << EOL > /etc/dovecot/conf.d/10-ssl.conf 
+ssl = no
+EOL
 
 DIR=$(dirname "$ZONAS_DOMINIO")
 if [ ! -d "$DIR" ]; then

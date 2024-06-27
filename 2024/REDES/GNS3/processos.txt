@@ -87,6 +87,23 @@ sudo vi /etc/dovecot/conf.d/
 sudo systemctl restart postfix.service
 sudo systemctl restart dovecot.service
 
-telnet localhost pop3
+# Para testar no Linux Live e Windows:
+telnet localhost 25
+HELO pastel.com
+MAIL FROM:<test@pastel.com>
+RCPT TO:<efraim@pastel.com>
+DATA
+Subject: Test Email
 
+This is a test email.
+.
+QUIT
+
+
+telnet 20.0.0.2 110
+USER your_username
+PASS your_password
+LIST
+RETR 1
+QUIT
 
