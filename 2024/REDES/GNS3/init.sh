@@ -7,13 +7,14 @@
 # VARIÁVEIS
 IP=20.0.0.2
 IPR=0.0.20
+DNSA=$IP
 DNS1=20.0.0.2
 DNS2=20.0.0.3
 GATEWAY=20.0.0.1
 DOMINIO="pastel.com"
 HOSTNAME="mail.$DOMINIO"
 MAILNAME=$DOMINIO
-ZONAS_IP="/etc/bind/db.20.0.0"
+ZONAS_IP="/etc/bind/db.$IPR"
 ZONAS_DOMINIO="/etc/bind/db.pastel.com"
 NETPLAN=$(find /etc/netplan/ -type f -name "*.yaml" | head -n 1)
 MAIL_USER="efraim" #usuário de email
@@ -47,16 +48,13 @@ sudo bash -c "cat > $ZONAS_IP << 'EOT'
 			2419200		; Expire
 			604800 )	; Negative Cache TTL
 ;
-@	IN	A	pastel.com.
-@	IN	NS	ns1.pastel.com.
-@	IN	NS	ns2.pastel.com.
-;
-2	IN	MX	mail.pastel.com.
-3	IN	MX	mail.pastel.com.
-2	IN	NS	ns1.pastel.com.
-2	IN	PTR	www.pastel.com.
-3	IN	NS	ns2.pastel.com.
-3	IN	PTR	www.pastel.com.
+@       IN      NS      ns1.pastel.com.
+@       IN      NS      ns2.pastel.com.
+2       IN      PTR     pastel.com.
+2       IN      PTR     www.pastel.com.
+2       IN      PTR     ns1.pastel.com.
+2       IN      PTR     mail.pastel.com.
+3       IN      PTR     ns2.pastel.com.
 ;
 EOT"
 
@@ -77,16 +75,14 @@ sudo bash -c "cat > $ZONAS_DOMINIO << 'EOT'
 			2419200		; Expire
 			604800 )	; Negative Cache TTL
 ;
-@	IN	A	pastel.com.
 @	IN	NS	ns1.pastel.com.
 @	IN	NS	ns2.pastel.com.
-;
-2	IN	MX	mail.pastel.com.
-3	IN	MX	mail.pastel.com.
-2	IN	NS	ns1.pastel.com.
-2	IN	PTR	www.pastel.com.
-3	IN	NS	ns2.pastel.com.
-3	IN	PTR	www.pastel.com.
+@	IN	A	20.0.0.2
+@       IN      A       20.0.0.2
+www     IN      A       20.0.0.2
+ns1     IN      A       20.0.0.2
+ns2     IN      A       20.0.0.3
+mail    IN      A       20.0.0.2
 ;
 EOT"
 
@@ -94,12 +90,12 @@ sudo bash -c "cat > << 'EOT'
 zone $DOMINIO {
     type master;
     file $ZONAS_DOMINIO;
-    allow-transfer { $DNS1; };
+    allow-transfer { $DNSA; };
 };    
 zone "$IPR.in-addr.arpa" {
     type master;
     file $ZONAS_IP;
-    allow-transfer { $DNS1; };
+    allow-transfer { $DNSA; };
 };
 EOT"
 
