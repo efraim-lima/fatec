@@ -53,9 +53,9 @@ sudo bash -c "cat > $ZONAS_IP << 'EOT'
 2       IN      PTR     pastel.com.
 2       IN      PTR     www.pastel.com.
 2       IN      PTR     ns1.pastel.com.
+3       IN      PTR     ns2.pastel.com.
 2       IN      PTR     mail.pastel.com.
 3       IN      PTR     mail.pastel.com.
-3       IN      PTR     ns2.pastel.com.
 ;
 EOT"
 
@@ -79,8 +79,8 @@ $TTL    604800
 @       IN      NS      ns1.pastel.com.
 @       IN      NS      ns2.pastel.com.
 @       IN      MX      10 mail.pastel.com.
-@       IN      A       20.0.0.2
-www     IN      A       20.0.0.2
+@       IN      A       $IP
+www     IN      A       $IP
 ns1     IN      A       20.0.0.2
 ns2     IN      A       20.0.0.3
 mail    IN      A       20.0.0.2
