@@ -4,27 +4,30 @@
 
 # sudo curl -L https://raw.githubusercontent.com/efraim-lima/fatec/main/2024/REDES/GNS3/init.sh -o /tmp/init.sh && sudo chmod +x /tmp/init.sh && sudo bash -x /tmp/init.sh
 
-sudo apt update
-sudo apt install -qq --show-progress bind9 dnsutils apache2 postfix dovecot-imapd dovecot-pop3d -y 
-
-sudo cp /etc/bind/db.local /etc/bind/db.pastel.com
-sudo cp /etc/bind/db.127 /etc/bind/db.20.0.0
-
-# Caminho do arquivo de configuração
+# VARIÁVEIS
 IP=20.0.0.2
 IPR=0.0.20
 DNS1=20.0.0.2
 DNS2=20.0.0.3
+GATEWAY=20.0.0.1
 DOMINIO="pastel.com"
-HOSTNAME="mail.pastel.com"
+HOSTNAME="mail.$DOMINIO"
 MAILNAME=$DOMINIO
 ZONAS_IP="/etc/bind/db.20.0.0"
 ZONAS_DOMINIO="/etc/bind/db.pastel.com"
 NETPLAN=$(find /etc/netplan/ -type f -name "*.yaml" | head -n 1)
+MAIL_USER="postfix_user" #usuário de email
+MAIL_PASSWORD="password" #senha de email
 
-#usuários de email
-MAIL_USER="postfix_user"
-MAIL_PASSWORD="password"
+sudo apt update
+sudo apt install -qq --show-progress bind9 dnsutils apache2 postfix dovecot-imapd dovecot-pop3d -y 
+
+debconf-set-selections <<< "postfix postfix/mailname string $DOMINIO"
+debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
+
+sudo cp /etc/bind/db.local /etc/bind/db.pastel.com
+sudo cp /etc/bind/db.127 /etc/bind/db.20.0.0
+
 
 # Verifica se o diretório existe, senão cria
 DIR=$(dirname "$ZONAS_IP")
@@ -111,7 +114,7 @@ sudo cp "$NETPLAN" "${NETPLAN}.bak"
 sudo sed -i '/dhcp4: true/c\         dhcp4: false' "$NETPLAN"
 
 # Adiciona as linhas após 'dhcp4: false'
-sudo sed -i '/dhcp4: false/a\         routes:\n         - to: default\n           via: 20.0.0.1\n         nameservers:\n           addresses:\n             - 20.0.0.2\n             - 20.0.0.3' "$NETPLAN"
+sudo sed -i '/dhcp4: false/a\         addresses:\n	- '$IP'/24	routes:\n         - to: default\n           via: '$GATEWAY'\n         nameservers:\n           addresses:\n             - '$DNS1'\n             - '$DNS2'' "$NETPLAN"
 
 # Mostra o conteúdo do arquivo modificado
 sudo cat "$NETPLAN"
@@ -177,11 +180,37 @@ add_mail_user() {
     sudo postconf -e "home_mailbox = Maildir/"
 }
 
+# Configurar o Dovecot
+echo "protocols = imap pop3 lmtp" >> /etc/dovecot/dovecot.conf
+sed -i 's|#mail_location =|mail_location = maildir:~/Maildir|' /etc/dovecot/conf.d/10-mail.conf
+sed -i 's|#disable_plaintext_auth = yes|disable_plaintext_auth = no|' /etc/dovecot/conf.d/10-auth.conf
+sed -i 's|auth_mechanisms = plain|auth_mechanisms = plain login|' /etc/dovecot/conf.d/10-auth.conf
+
+DIR=$(dirname "$ZONAS_DOMINIO")
+if [ ! -d "$DIR" ]; then
+    sudo mkdir -p "$DIR"
+fi
+
+PATHDOVECOT="/etc/dovecot/conf.d/10-master.conf"
+cat << EOL >> $PATHDOVECOT
+service imap-login {
+  inet_listener imap {
+    port = 143
+  }
+}
+
+service pop3-login {
+  inet_listener pop3 {
+    port = 110
+  }
+}
+EOL
+
 configure_postfix
 add_mail_user
 
-sudo systemctl restart bind9
-sudo systemctl restart apache2
+sudo systemctl restart bind9.service
+sudo systemctl restart apache2.service
 sudo systemctl restart postfix.service
 sudo systemctl restart dovecot.service
 
