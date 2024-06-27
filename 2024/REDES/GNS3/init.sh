@@ -183,13 +183,13 @@ add_mail_user() {
 # Configurar o Dovecot
 echo "protocols = imap pop3 lmtp" >> /etc/dovecot/dovecot.conf
 
-sudo cat << EOL > /etc/dovecot/conf.d/10-mail.conf
+sudo cat << EOL >> /etc/dovecot/conf.d/10-mail.conf
 mail_location = maildir:~/Maildir
 disable_plaintext_auth = no
 auth_mechanisms = plain login
 EOL
 
-sudo cat << EOL > /etc/dovecot/conf.d/10-ssl.conf 
+sudo cat << EOL >> /etc/dovecot/conf.d/10-ssl.conf 
 ssl = no
 EOL
 

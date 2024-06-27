@@ -107,3 +107,7 @@ LIST
 RETR 1
 QUIT
 
+
+#No Windows
+Send-MailMessage -From "teste@pastel.com" -To "efraim@pastel.com" -Subject "Teste de SMTP" -Body "Este é um teste de SMTP." -SmtpServer "mail.pastel.com"
+
