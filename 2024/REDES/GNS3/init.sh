@@ -16,11 +16,11 @@ MAILNAME=$DOMINIO
 ZONAS_IP="/etc/bind/db.20.0.0"
 ZONAS_DOMINIO="/etc/bind/db.pastel.com"
 NETPLAN=$(find /etc/netplan/ -type f -name "*.yaml" | head -n 1)
-MAIL_USER="postfix_user" #usuário de email
-MAIL_PASSWORD="password" #senha de email
+MAIL_USER="efraim" #usuário de email
+MAIL_PASSWORD="12345" #senha de email
 
 sudo apt update
-sudo apt install -qq --show-progress bind9 dnsutils apache2 postfix dovecot-imapd dovecot-pop3d -y 
+sudo apt install -qq --show-progress bind9 dnsutils apache2 postfix dovecot-core dovecot-imapd dovecot-pop3d dovecot-lmtpd -y 
 
 debconf-set-selections <<< "postfix postfix/mailname string $DOMINIO"
 debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
@@ -47,6 +47,7 @@ sudo bash -c "cat > $ZONAS_IP << 'EOT'
 			2419200		; Expire
 			604800 )	; Negative Cache TTL
 ;
+@	IN	A	pastel.com.
 @	IN	NS	ns1.pastel.com.
 @	IN	NS	ns2.pastel.com.
 ;
@@ -76,6 +77,7 @@ sudo bash -c "cat > $ZONAS_DOMINIO << 'EOT'
 			2419200		; Expire
 			604800 )	; Negative Cache TTL
 ;
+@	IN	A	pastel.com.
 @	IN	NS	ns1.pastel.com.
 @	IN	NS	ns2.pastel.com.
 ;
