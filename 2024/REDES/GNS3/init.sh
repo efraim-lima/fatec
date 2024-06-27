@@ -83,10 +83,11 @@ www     IN      A       20.0.0.2
 ns1     IN      A       20.0.0.2
 ns2     IN      A       20.0.0.3
 mail    IN      A       20.0.0.2
+mail	IN	A	20.0.0.3
 ;
 EOT"
 
-sudo bash -c "cat > << 'EOT'
+sudo bash -c "cat > /etc/bind/named.conf.local << 'EOT'
 zone $DOMINIO {
     type master;
     file $ZONAS_DOMINIO;
