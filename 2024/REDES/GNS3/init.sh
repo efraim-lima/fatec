@@ -2,9 +2,7 @@
 
 # Para que este script funcione:
 
-# sudo wget https://github.com/efraim-lima/fatec/tree/bdff8707db839deede8575e0856ec31d96c47f4d/2024/REDES/GNS3/init.sh -O /tmp/init.sh
-# sudo chmod +x /tmp/init.sh
-# sudo /tmp/init.sh
+# sudo curl -L https://raw.githubusercontent.com/efraim-lima/fatec/main/2024/REDES/GNS3/init.sh -o /tmp/init.sh && sudo chmod +x /tmp/init.sh && sudo bash -x /tmp/init.sh
 
 sudo apt update
 sudo apt install -qq --show-progress bind9 dnsutils apache2 postfix dovecot-imapd dovecot-pop3d -y 

@@ -1,92 +1,72 @@
-sudo apt update
-sudo apt install bind9 dnsutils apache2 postfix dovecot-imapd dovecot-pop3d -y
+!
+version 12.4
+!
+hostname R3
+!
+enable secret 5 $1$mERr$WwfYkWJNgzhVOU1fKBqJ9/
+!
+ip dhcp pool LAN
+ network 19.0.0.0 255.255.255.0
+ default-router 19.0.0.1 
+ dns-server 20.0.0.3 20.0.0.2
+ exit
+!
+interface FastEthernet0
+ ip address 19.0.0.1 255.255.255.0
+ no shutdown
+ speed auto
+ exit
+!
+interface Serial0
+ ip address 16.0.0.2 255.255.255.0
+ no shutdown
+ exit
+!
+interface Serial1
+ ip address 17.0.0.1 255.255.255.0
+ no shutdown
+ exit
+!
+router rip
+ version 2
+ network 15.0.0.0
+ network 16.0.0.0
+ network 17.0.0.0
+ network 18.0.0.0
+ network 19.0.0.0
+ network 20.0.0.0
+ no auto-summary
+ exit
+!
+banner motd ^CC
 
-touch /etc/bind/db.<site>.com
-sudo cp /etc/bind/db.local /etc/bind/db.<site>.com
-vi /etc/bind/db.<site>.com
+!!!ATENCAO!!!
 
-sudo cp /etc/bind/db.127 /etc/bind/db.20.0.0
-sudo vi /etc/bind/db.20.0.0
+Voce esta em um ambiente de rede privada.
+Todo acesso nao autorizado nao e permitido e pode ser penalizado de acordo com o regimento de leis em conformidade com os orgaos responsaveis.
 
-";
-; BIND reverse data file for local 192.168.1.XXX net
-;
-$TTL    604800
-@       IN      SOA     ns.example.com. root.example.com. (
-                              2         ; Serial
-                         604800         ; Refresh
-                          86400         ; Retry
-                        2419200         ; Expire
-                         604800 )       ; Negative Cache TTL
-;
-@       IN      NS      ns.
-10      IN      PTR     ns.example.com."
+- line: $(line)
+- hostname: $(hostname)
+- domain: $(domain)
 
-
-sudo vi /etc/bind/named.conf.local
-
-"zone "example.com" {
-    type master;
-    file "/etc/bind/db.example.com";
-    allow-transfer { 192.168.1.11; };
-};
-    
-zone "1.168.192.in-addr.arpa" {
-    type master;
-    file "/etc/bind/db.192";
-    allow-transfer { 192.168.1.11; };
-};"
-
-vi /etc/netplan/<arqivo>
-
-network:
-   version: 2
-   ethernets:
-      eth0:
-         addresses:
-         - 20.0.0.3/24
-         dhcp4: false
-         routes: 
-         - to: default
-           via: 20.0.0.1
-	 nameservers:
-	   addresses:
-	     - 20.0.0.2
-	     - 20.0.0.3
-
-sudo netplan try
-
-sudo sustemctl restart bind9.service
-sudo systemctl restart apache2
-
-
-################################################################################################################################################################################################################################################################################################################################################################################################################
-
-
-MAIL
-sudo dpkg-reconfigure postfix
-
-Marcar:
-"
-Internet Site
-mail.pastel.com
-steve
-mail.pastel.com, localhost.localdomain, localhost
-No
-127.0.0.0/8 \[::ffff:127.0.0.0\]/104 \[::1\]/128 20.0.0.0/24
-0
-+
-all
-"
-
-sudo vi /etc/postfix/main.cf
-
-sudo vi /etc/dovecot/dovecot.conf
-sudo vi /etc/dovecot/conf.d/
-
-sudo systemctl restart postfix.service
-sudo systemctl restart dovecot.service
-
-telnet localhost pop3
-
+Projeto de redes no Packet Tracer!.
+^C
+!
+line con 0
+ exec-timeout 5 0
+ password 7 0822455D0A1606181C1803082F
+ logging synchronous
+ login
+!
+line vty 0 4
+ exec-timeout 5 0
+ password 7 0822455D0A1611121E050910
+ login
+!
+line aux 0
+ exec-timeout 5 0
+ logging synchronous
+!
+!
+end
 
