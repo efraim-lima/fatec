@@ -1,0 +1,1 @@
+Em uma maquina host, local, os arquivos de login ficam localizados em um caminho de diretório SAM/LOCAL/WINDOWS10 (verificar), de forma local na HD.
