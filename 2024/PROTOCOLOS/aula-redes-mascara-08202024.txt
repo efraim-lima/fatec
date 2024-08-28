@@ -1,0 +1,20 @@
+Uma maneira legal de se calcular as mascaras conriga e extrair o decimal a partir do binario, calcular o restante e a partir disso fazer o processo de calcular o restante.
+
+Exemplo:
+IP: 192.168.0.128/26
+BIN: 11111111.11111111.11111111.11000000
+
+Calculando os binarios do ultimo octeto teremos
+128 + 64 = 192, ou seja nossa mascara de rede em decimal e:
+255.255.255.192, agora basta calcular quantos bits abertos temos fazendo a subtraçao:
+
+Endereço de rede:			   192  .   168  .    0   .    0    /26
+Mascara de rede em Bin:			11111111.11111111.11111111.11000000
+Hosts livres em Bin:			00000000.00000000.00000000.00111111
+Mascara de rede completa:		   255  .   255  .   255  .   255   (apenas de exemplo para podermos subtrair as demais máscaras)
+Mascara de rede reversa:		   255  .   255  .   255  .   192
+quantidade de IPs:		 	    0   .    0   .    0   .    63    == Mascara de rede completa - Mascara de rede reversa
+Broadcast da rede:			   192  .   168  .    0   .    63
+
+
+Chegaremos ao numero de IPs disponiveis naquela mascara, mas precisamos compreender que 2 IPs nao podem ser utilizados, nem o endereço de broadcast (ultimo endereço da rede) e nem o endereço de rede (primeiro endereço). Com isso saberemos que podemos adicionar 61 dispositivos nesta rede.
